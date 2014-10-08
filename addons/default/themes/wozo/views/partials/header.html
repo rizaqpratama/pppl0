@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Ditjen Pengendalian Penyakit dan Penyehatan Linkungan</title>
+
+    <!-- Bootstrap Core CSS -->
+    {{theme:css file="bootstrap.min.css"}}
+
+    <!-- jQuery Version 1.11.0 -->
+
+    {{theme:js file="jquery-1.11.0.js"}}
+    <!-- Bootstrap Core JavaScript -->
+    {{theme:js file="bootstrap.min.js"}}
+    
+
+    <!-- Custom CSS -->
+    <style>
+        @media(min-width: 1000px){
+            .container{
+                width: 970px;
+            }
+        }
+        body {
+            background: #f5f5f5;
+            margin: 0;
+            color: #333333;
+            font-size: 13px;
+        }
+
+        #subMenuTop {
+            text-align: right;
+            background: #269abc;
+            margin-bottom: 10px;
+            padding-top: 5px;
+        }
+
+        #subMenuTop ul li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        #subMenuTop ul li a {
+            color: #000000;
+            font-weight: bold;
+        }
+
+        #subMenuTop ul li a:hover {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        #mainContainer {
+            background: #ffffff;
+            box-shadow: 0 0 1px 1px #aaaaaa;
+        }
+
+        .mynav {
+            background: #008dc9;
+            border-radius: 0;
+            height: 43px;
+            font-weight: bold;
+        }
+
+        .mynav a {
+            color: #ffffff;
+        }
+
+        .mynav li a:hover {
+            background: #D86422;
+            margin-top: -1px;
+        }
+
+        .mynav .open > a:focus {
+            background: #D86422;
+            margin-top: -1px;
+        }
+
+        .my-dropdown-menu {
+            background: #008dc9;
+
+        }
+
+        .my-dropdown-menu li a {
+            color: #ffffff;
+        }
+
+        .my-panel {
+            padding: 0px;
+        }
+
+        .my-panel-header {
+            margin-bottom: 5px;
+            background: #008dc9;
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 15px;
+            width: 100%;
+            min-height: 35px;
+            height: 35px;
+            padding: 7px;
+        }
+
+        .my-panel-body {
+            width: 100%;
+            padding: 5px;
+
+        }
+
+        .my-panel-body-dark {
+            width: 100%;
+            padding: 5px;
+            background: #dddddd;
+        }
+
+        .bold-link {
+            font-weight: bold;
+            color: #008dc9;
+
+        }
+
+        .bold-link:hover {
+            text-decoration: none;
+            color: rgba(0, 3, 68, 0.70);
+            transition: color 1s;
+            -webkit-transition: color 1s;
+        }
+
+        .socMedLinks p {
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        .socMedLinks ul li {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .socMedLinks ul li:hover {
+
+        }
+
+        #footerContainer {
+
+            background: #0081b8;
+            padding-top: 10px;
+
+        }
+
+        .tab-content {
+            min-height: 100px;
+        }
+
+        .footer-menu {
+            color: #ffffff;
+        }
+
+        .footer-menu h5 {
+            font-weight: bold;
+        }
+
+        .footer-menu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .footer-menu ul li {
+            margin-left: 0;
+        }
+
+        .footer-menu ul li a {
+            color: #ffffff;
+        }
+
+        .footer-menu ul li a:hover {
+            color: #c1e2b3;
+            text-decoration: none;
+        }
+
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+    
+</head>
+
+<body>
+
+
+<!-- Page Content -->
+<div class="container" id="mainContainer">
+<div class="row" id="subMenuTop">
+    <div class="col-lg-4 col-lg-offset-8 ">
+        <ul class="inline">
+            <li><a href="#">English</a></li>
+            <li><a href="#">Indonesia</a></li>
+        </ul>
+
+    </div>
+</div>
+<div class="row" id="topHeaderContainer">
+    <div class="col-lg-10" id="topHeader">
+        
+        {{theme:image file="header.png" width="100%"}}
+
+    </div>
+    <div class="col-lg-2" class="socMedLinks">
+        <ul class="list-inline">
+            <li><a href="#">{{theme:image file="Facebook-icon.png"}}</a></li>
+            <li><a href="#">{{theme:image file="GooglePlus-icon.png"}}</a></li>
+            <li><a href="#">{{theme:image file="Twitter-icon.png"}}</a></li>
+            <li><a href="#">{{theme:image file="Youtube-icon.png"}}</a></li>
+
+        </ul>
+
+    </div>
+</div>
+
+
+<div class="row">
+    <!-- Navigation -->
+    <nav class="navbar mynav" role="navigation">
+        <div class="container">
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+                <ul class="nav navbar-nav">
+                    {{navigation:links group="header"}}
+
+                    <li {{if children}} class="dropdown" {{endif}}>
+                        <a href="{{url}}" {{if children}} class="dropdown-toggle" data-toggle="dropdown"{{endif}}>{{title}}</a>
+                        {{if children}}
+                        <ul class="dropdown-menu my-dropdown-menu" role="menu">
+                            {{children}}
+                            <li><a href="{{url}}">{{title}}</a></li>
+                            {{/children}}
+                        </ul>
+                        {{endif}}
+
+                    </li>
+                    <!-- <li>
+                        <a href="#">Topik Kesehatan</a>
+                    </li>
+                    <li>
+                        <a href="#">Data</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tentang Ditjen PPPL <span
+                                class="caret"></span></a>
+                        <ul class="dropdown-menu my-dropdown-menu" role="menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">One more separated link</a></li>
+                        </ul>
+                    </li> -->
+                    {{/navigation:links}}
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+</div>
