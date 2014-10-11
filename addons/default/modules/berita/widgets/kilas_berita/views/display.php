@@ -74,7 +74,7 @@ Additional Styles (required)
                 {{/berita.entries}} -->
             </div>
         </div>
-    </div>
+    
     <script>
     $('#myCarousel').carousel({
         interval:   4000
