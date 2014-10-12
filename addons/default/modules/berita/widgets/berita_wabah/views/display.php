@@ -1,4 +1,4 @@
-<div class="my-panel-header">{{judul}}</div>
+<div class="my-panel-header">{{title}}</div>
             <div class="my-panel-body">
                 <ul class="list-group">
 

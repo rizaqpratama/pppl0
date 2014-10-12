@@ -37,14 +37,14 @@ Additional Styles (required)
 </style>
 
 <div class="my-panel">
-            <div class="my-panel-header">{{judul}}</div>
+            <div class="my-panel-header">{{title}}</div>
             <div class="my-panel-body">
 
                 <div id="myCarousel" class="carousel slide">        
                 <div class="carousel-inner">           
                     {{berita.entries}}
                     <div class="item active"> 
-                        <a href="#"><img class="thumbnail" src="http://placehold.it/600x400/" alt="Slide1"></a>
+                
                         <div class="caption">
                           <h4>{{judul}}</h4>
                             <p style="margin-left: 5px">{{helper:character_limiter string=berita limit=140}}
@@ -63,15 +63,7 @@ Additional Styles (required)
 
 
 
-                <!-- {{berita.entries}}
-                <div>
-                <h4>{{judul}}</h4>
-                <img src="{{gambar:image}}" align="left"/>
-
-                <p style="margin-left: 5px">{{helper:character_limiter string=berita limit=140}}
-                </p>
-                </div>
-                {{/berita.entries}} -->
+                
             </div>
         </div>
     

@@ -69,7 +69,7 @@ class Widget_Berita_utama extends Widgets
 	 */
 	public function run($options)
 	{
-		!empty($options['judul']) OR $options['judul'] = 'Berita Utama';
+		!empty($options['title']) OR $options['title'] = 'Berita Utama';
 
 
 		$params = array(

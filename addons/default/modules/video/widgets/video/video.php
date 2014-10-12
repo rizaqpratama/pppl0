@@ -3,7 +3,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 
-class Widget_Berita_wabah extends Widgets
+class Widget_Video extends Widgets
 {
 
 	/**
@@ -12,8 +12,8 @@ class Widget_Berita_wabah extends Widgets
 	 * @var array
 	 */
 	public $title = array(
-		'en' => 'Pandemic News',
-		'id' => 'Berita Wabah Penyakit'
+		'en' => 'Video',
+		'id' => 'Video'
 	);
 
 	/**
@@ -22,8 +22,8 @@ class Widget_Berita_wabah extends Widgets
 	 * @var array
 	 */
 	public $description = array(
-		'en' => 'pandemic news widget',
-		'id' => 'widget berita wabah penyakit',
+		'en' => 'video widget',
+		'id' => 'widget video',
 		
 	);
 
@@ -69,21 +69,31 @@ class Widget_Berita_wabah extends Widgets
 	 */
 	public function run($options)
 	{
-		!empty($options['title']) OR $options['title'] = 'Berita Wabah Penyakit';
+		!empty($options['title']) OR $options['title'] = 'Video';
 
 
-		$params = array(
-            'stream' => 'beritas',
-            'namespace' => 'berita',
-       		'where' => "kategori = 'Wabah'"
-            
-            
+		 $params = array(
+            'stream' => 'videos',
+            'namespace' => 'video',
+            'limit' => 1
         );
 
-       	$berita = $this->streams->entries->get_entries($params);
-
-       	$options['berita']=$berita;
-       	$options['count'] =count($berita);      
+       	$video = $this->streams->entries->get_entries($params);
+        if(count($video)>0){
+                
+                $vid= $video['entries'][0];
+                
+                $link_asli= $vid['link'];
+                $link_asli = str_replace("https:","",$link_asli);
+                $link_asli = str_replace("http:","",$link_asli);
+                $link_asli = str_replace("watch?v=","embed/",$link_asli);
+                
+                
+            }
+            
+       	$options['video']=$video;
+       	$options['count'] =count($video);
+        $options['link'] =$link_asli;
 
 		return $options;
 	}

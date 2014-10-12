@@ -1,7 +1,7 @@
 <div class="my-panel">
 
 
-                <div class="my-panel-header"> {{judul}}</div>
+                <div class="my-panel-header"> {{title}}</div>
                 <div class="my-panel-body-dark">
 
                     {{berita.entries}}

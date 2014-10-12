@@ -2,7 +2,7 @@
 
 class Module_Berita extends Module
 {
-    public $version = '1.0';
+    public $version = '1.0.1';
 
     public function info()
     {
@@ -103,7 +103,10 @@ class Module_Berita extends Module
                 'namespace' => 'berita',
                 'type' => 'wysiwyg',
                 'assign' => 'beritas',
-                'required' => true
+                'required' => true,
+                'extra' => array(
+                    'editor_type' => 'advanced'
+                )
             ),
             array(
                 'namespace' => 'berita',

@@ -69,7 +69,7 @@ class Widget_Cerita_daerah extends Widgets
 	 */
 	public function run($options)
 	{
-		!empty($options['judul']) OR $options['judul'] = 'Cerita Daerah';
+		!empty($options['title']) OR $options['title'] = 'Cerita Daerah';
 
 
 		$params = array(

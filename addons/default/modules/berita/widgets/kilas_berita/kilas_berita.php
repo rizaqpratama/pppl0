@@ -69,7 +69,7 @@ class Widget_Kilas_berita extends Widgets
 	 */
 	public function run($options)
 	{
-		!empty($options['judul']) OR $options['judul'] = 'Kilas Berita';
+		!empty($options['title']) OR $options['title'] = 'Kilas Berita';
 
 
 		 $params = array(
