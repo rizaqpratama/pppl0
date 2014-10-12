@@ -2,10 +2,10 @@
 -- version 3.5.1
 -- http://www.phpmyadmin.net
 --
--- Inang: localhost
--- Waktu pembuatan: 02 Okt 2014 pada 00.50
--- Versi Server: 5.5.24-log
--- Versi PHP: 5.3.13
+-- Host: localhost
+-- Generation Time: Oct 12, 2014 at 08:55 AM
+-- Server version: 5.5.24-log
+-- PHP Version: 5.3.13
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,13 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Basis data: `pppl`
+-- Database: `pppl`
 --
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `core_settings`
+-- Table structure for table `core_settings`
 --
 
 CREATE TABLE IF NOT EXISTS `core_settings` (
@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `core_settings` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Stores settings for the multi-site interface';
 
 --
--- Dumping data untuk tabel `core_settings`
+-- Dumping data for table `core_settings`
 --
 
 INSERT INTO `core_settings` (`slug`, `default`, `value`) VALUES
@@ -47,7 +47,7 @@ INSERT INTO `core_settings` (`slug`, `default`, `value`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `core_sites`
+-- Table structure for table `core_sites`
 --
 
 CREATE TABLE IF NOT EXISTS `core_sites` (
@@ -66,7 +66,7 @@ CREATE TABLE IF NOT EXISTS `core_sites` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
 
 --
--- Dumping data untuk tabel `core_sites`
+-- Dumping data for table `core_sites`
 --
 
 INSERT INTO `core_sites` (`id`, `name`, `ref`, `domain`, `active`, `created_on`, `updated_on`) VALUES
@@ -75,7 +75,7 @@ INSERT INTO `core_sites` (`id`, `name`, `ref`, `domain`, `active`, `created_on`,
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `core_users`
+-- Table structure for table `core_users`
 --
 
 CREATE TABLE IF NOT EXISTS `core_users` (
@@ -97,7 +97,7 @@ CREATE TABLE IF NOT EXISTS `core_users` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Super User Information' AUTO_INCREMENT=2 ;
 
 --
--- Dumping data untuk tabel `core_users`
+-- Dumping data for table `core_users`
 --
 
 INSERT INTO `core_users` (`id`, `email`, `password`, `salt`, `group_id`, `ip_address`, `active`, `activation_code`, `created_on`, `last_login`, `username`, `forgotten_password_code`, `remember_code`) VALUES
@@ -106,7 +106,35 @@ INSERT INTO `core_users` (`id`, `email`, `password`, `salt`, `group_id`, `ip_add
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `default_blog`
+-- Table structure for table `default_berita_beritas`
+--
+
+CREATE TABLE IF NOT EXISTS `default_berita_beritas` (
+  `id` int(9) NOT NULL AUTO_INCREMENT,
+  `created` datetime NOT NULL,
+  `updated` datetime DEFAULT NULL,
+  `created_by` int(11) DEFAULT NULL,
+  `ordering_count` int(11) DEFAULT NULL,
+  `judul` varchar(200) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `slug` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `berita` longtext COLLATE utf8_unicode_ci,
+  `kategori` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `berita_utama` text COLLATE utf8_unicode_ci,
+  `gambar` char(15) COLLATE utf8_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `default_berita_beritas`
+--
+
+INSERT INTO `default_berita_beritas` (`id`, `created`, `updated`, `created_by`, `ordering_count`, `judul`, `slug`, `berita`, `kategori`, `berita_utama`, `gambar`) VALUES
+(2, '2014-10-11 13:29:41', NULL, 1, 1, 'Percoba coba an', 'percoba-coba-an', '<p  0px; padding: 0px; color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; line-height: normal; text-align: justify; background-color: rgb(243, 255, 240);"><span  arial, helvetica, sans-serif; font-size: small;">Balai Besar Teknik Kesehatan Lingkungan dan Pengendalian Penyakit Kelas I Jakarta (BBTKLPP Kelas I Jakarta) yang merupakan satu-satunya Kantor BBTKLPP yang menjadi pelopor terbentuknya Gugus Depan Pramuka di wilayah Cakung Jakarta Timur, pada (12/9) melaksanakan Pelantikan Majelis Pembimbing untuk Gugus Depan (Mabigus) 06351 dan 06352 untuk Pangkalan BBTKLLPP Kelas I Jakarta.&nbsp;</span></p>\r\n\r\n<p  0px; padding: 0px; color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; line-height: normal; text-align: justify; background-color: rgb(243, 255, 240);">&nbsp;</p>\r\n\r\n<p  0px; padding: 0px; color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; line-height: normal; text-align: justify; background-color: rgb(243, 255, 240);"><span  arial, helvetica, sans-serif; font-size: small;">Pelantikan yang dilaksanakan di Kantor BBTKLPP Jakarta ini, dipimpin langsung oleh &nbsp;Drs. H. Yitno Suyoko, MM selaku Kepala Kwartir Ranting Cakung. Hadir dalam pelantikan tersebut pengurus Kwartir Ranting Cakung, para perwakilan dari Lintas Program terkait di Lingkungan Kemenkes RI, dan para anggota Pramuka Kwartir Ranting Cakung Jakarta Timur.</span></p>\r\n\r\n<p  0px; padding: 0px; color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; line-height: normal; text-align: justify; background-color: rgb(243, 255, 240);">&nbsp;</p>\r\n\r\n<p  0px; padding: 0px; color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; line-height: normal; text-align: justify; background-color: rgb(243, 255, 240);"><span  arial, helvetica, sans-serif; font-size: small;">Adapun Susunan Mabigus Pangkalan BBTKLPP Kelas I Jakarta yang dilantik adalah DR.PA. Kodrat Pramudho, SKM, M.Kes sebagai Kepala Mabigus; drg. Djauzi, M.Kes sebagai Kepala Harian Mabigus; Heri Nugroho, ST, MKM sebagai Sekretaris; Sri Hartuti sebagai Bendahara, &nbsp;Wahyuni Richasari sebagai anggota; Didi Purnama, SKM, MKM sebagai Anggota; Hadi Suhatman sebagai Anggota; Dwi Martanti, SKM sebagai Anggota; Ir. Kusmiyarti sebagai Anggota; dan Agustin, SKM, M.Kes sebagai Anggota.</span></p>\r\n\r\n<p  0px; padding: 0px; color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; line-height: normal; text-align: justify; background-color: rgb(243, 255, 240);">&nbsp;</p>', 'Umum', 'Yes', 'dummy');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `default_blog`
 --
 
 CREATE TABLE IF NOT EXISTS `default_blog` (
@@ -135,7 +163,7 @@ CREATE TABLE IF NOT EXISTS `default_blog` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `default_blog_categories`
+-- Table structure for table `default_blog_categories`
 --
 
 CREATE TABLE IF NOT EXISTS `default_blog_categories` (
@@ -151,7 +179,7 @@ CREATE TABLE IF NOT EXISTS `default_blog_categories` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `default_ci_sessions`
+-- Table structure for table `default_ci_sessions`
 --
 
 CREATE TABLE IF NOT EXISTS `default_ci_sessions` (
@@ -165,7 +193,7 @@ CREATE TABLE IF NOT EXISTS `default_ci_sessions` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data untuk tabel `default_ci_sessions`
+-- Dumping data for table `default_ci_sessions`
 --
 
 INSERT INTO `default_ci_sessions` (`session_id`, `ip_address`, `user_agent`, `last_activity`, `user_data`) VALUES
@@ -176,12 +204,18 @@ INSERT INTO `default_ci_sessions` (`session_id`, `ip_address`, `user_agent`, `la
 ('2655d936c4df3b9ecd9f74f29da109e0', '::1', 'Mozilla/5.0 (Windows NT 6.3; rv:32.0) Gecko/20100101 Firefox/32.0', 1411814615, ''),
 ('95d4452198ff34e75258f693f4680396', '::1', 'Mozilla/5.0 (Windows NT 6.3; rv:32.0) Gecko/20100101 Firefox/32.0', 1411815586, ''),
 ('eff08349bef04b8b1c788491bd378003', '::1', 'Mozilla/5.0 (Windows NT 6.3; rv:32.0) Gecko/20100101 Firefox/32.0', 1411918118, 'a:6:{s:8:"username";s:12:"rizaqpratama";s:5:"email";s:22:"rizaqpratama@gmail.com";s:2:"id";s:1:"1";s:7:"user_id";s:1:"1";s:8:"group_id";s:1:"1";s:5:"group";s:5:"admin";}'),
-('5347d87e92f4a6960165d4f9c5909692', '::1', 'Mozilla/5.0 (Windows NT 6.3; rv:32.0) Gecko/20100101 Firefox/32.0', 1411949836, 'a:5:{s:5:"email";s:22:"rizaqpratama@gmail.com";s:2:"id";s:1:"1";s:7:"user_id";s:1:"1";s:8:"group_id";s:1:"1";s:5:"group";s:5:"admin";}');
+('5347d87e92f4a6960165d4f9c5909692', '::1', 'Mozilla/5.0 (Windows NT 6.3; rv:32.0) Gecko/20100101 Firefox/32.0', 1411949836, 'a:5:{s:5:"email";s:22:"rizaqpratama@gmail.com";s:2:"id";s:1:"1";s:7:"user_id";s:1:"1";s:8:"group_id";s:1:"1";s:5:"group";s:5:"admin";}'),
+('4b875ea0f7662469252b1e86f23b6701', '::1', 'Mozilla/5.0 (Windows NT 6.3; rv:32.0) Gecko/20100101 Firefox/32.0', 1412260983, 'a:6:{s:8:"username";s:12:"rizaqpratama";s:5:"email";s:22:"rizaqpratama@gmail.com";s:2:"id";s:1:"1";s:7:"user_id";s:1:"1";s:8:"group_id";s:1:"1";s:5:"group";s:5:"admin";}'),
+('594da516741e7972fb06f0e8c8dc0cf1', '::1', 'Mozilla/5.0 (Windows NT 6.3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.124 Safari/537.36', 1412782201, ''),
+('1404540f588356af5cbea78dc35f7c2b', '::1', 'Mozilla/5.0 (Windows NT 6.3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.124 Safari/537.36', 1412784216, 'a:6:{s:8:"username";s:12:"rizaqpratama";s:5:"email";s:22:"rizaqpratama@gmail.com";s:2:"id";s:1:"1";s:7:"user_id";s:1:"1";s:8:"group_id";s:1:"1";s:5:"group";s:5:"admin";}'),
+('e93400a7e93b3ef7ff83dbe9ad127b2c', '::1', 'Mozilla/5.0 (Windows NT 6.3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.124 Safari/537.36', 1413033664, 'a:6:{s:8:"username";s:12:"rizaqpratama";s:5:"email";s:22:"rizaqpratama@gmail.com";s:2:"id";s:1:"1";s:7:"user_id";s:1:"1";s:8:"group_id";s:1:"1";s:5:"group";s:5:"admin";}'),
+('a7f69144466256fa60a93ca7ecfc7af0', '::1', 'Mozilla/5.0 (Windows NT 6.3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.124 Safari/537.36', 1413033989, 'a:5:{s:5:"email";s:22:"rizaqpratama@gmail.com";s:2:"id";s:1:"1";s:7:"user_id";s:1:"1";s:8:"group_id";s:1:"1";s:5:"group";s:5:"admin";}'),
+('4b6df6e420b5523612229df99c37ac72', '::1', 'Mozilla/5.0 (Windows NT 6.3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.124 Safari/537.36', 1413103802, 'a:5:{s:5:"email";s:22:"rizaqpratama@gmail.com";s:2:"id";s:1:"1";s:7:"user_id";s:1:"1";s:8:"group_id";s:1:"1";s:5:"group";s:5:"admin";}');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `default_comments`
+-- Table structure for table `default_comments`
 --
 
 CREATE TABLE IF NOT EXISTS `default_comments` (
@@ -208,7 +242,7 @@ CREATE TABLE IF NOT EXISTS `default_comments` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `default_comment_blacklists`
+-- Table structure for table `default_comment_blacklists`
 --
 
 CREATE TABLE IF NOT EXISTS `default_comment_blacklists` (
@@ -221,7 +255,7 @@ CREATE TABLE IF NOT EXISTS `default_comment_blacklists` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `default_contact_log`
+-- Table structure for table `default_contact_log`
 --
 
 CREATE TABLE IF NOT EXISTS `default_contact_log` (
@@ -240,7 +274,7 @@ CREATE TABLE IF NOT EXISTS `default_contact_log` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `default_data_fields`
+-- Table structure for table `default_data_fields`
 --
 
 CREATE TABLE IF NOT EXISTS `default_data_fields` (
@@ -253,10 +287,10 @@ CREATE TABLE IF NOT EXISTS `default_data_fields` (
   `view_options` blob,
   `is_locked` enum('yes','no') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'no',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=35 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=57 ;
 
 --
--- Dumping data untuk tabel `default_data_fields`
+-- Dumping data for table `default_data_fields`
 --
 
 INSERT INTO `default_data_fields` (`id`, `field_name`, `field_slug`, `field_namespace`, `field_type`, `field_data`, `view_options`, `is_locked`) VALUES
@@ -276,18 +310,31 @@ INSERT INTO `default_data_fields` (`id`, `field_name`, `field_slug`, `field_name
 (14, 'lang:profile_address_line3', 'address_line3', 'users', 'text', 0x613a323a7b733a31303a226d61785f6c656e677468223b4e3b733a31333a2264656661756c745f76616c7565223b4e3b7d, NULL, 'no'),
 (15, 'lang:profile_address_postcode', 'postcode', 'users', 'text', 0x613a323a7b733a31303a226d61785f6c656e677468223b693a32303b733a31333a2264656661756c745f76616c7565223b4e3b7d, NULL, 'no'),
 (16, 'lang:profile_website', 'website', 'users', 'url', NULL, NULL, 'no'),
+(40, 'Lokasi', 'lokasi', 'event', 'text', 0x613a323a7b733a31303a226d61785f6c656e677468223b4e3b733a31333a2264656661756c745f76616c7565223b4e3b7d, NULL, 'no'),
+(39, 'Waktu Selesai', 'waktu_selesai', 'event', 'datetime', 0x613a353a7b733a383a227573655f74696d65223b733a333a22796573223b733a31303a2273746172745f64617465223b4e3b733a383a22656e645f64617465223b4e3b733a373a2273746f72616765223b4e3b733a31303a22696e7075745f74797065223b733a31303a22646174657069636b6572223b7d, NULL, 'no'),
 (25, 'Nama', 'nama', 'kegiatan', 'text', 0x613a323a7b733a31303a226d61785f6c656e677468223b693a3230303b733a31333a2264656661756c745f76616c7565223b4e3b7d, NULL, 'no'),
 (26, 'Deskripsi', 'deskripsi', 'kegiatan', 'wysiwyg', 0x613a323a7b733a31313a22656469746f725f74797065223b4e3b733a31303a22616c6c6f775f74616773223b4e3b7d, NULL, 'no'),
 (27, 'Waktu', 'waktu', 'kegiatan', 'datetime', 0x613a353a7b733a383a227573655f74696d65223b4e3b733a31303a2273746172745f64617465223b4e3b733a383a22656e645f64617465223b4e3b733a373a2273746f72616765223b4e3b733a31303a22696e7075745f74797065223b4e3b7d, NULL, 'no'),
 (28, 'Lokasi', 'lokasi', 'kegiatan', 'text', 0x613a323a7b733a31303a226d61785f6c656e677468223b4e3b733a31333a2264656661756c745f76616c7565223b4e3b7d, NULL, 'no'),
-(32, 'Nama', 'nama', 'link', 'text', 0x613a323a7b733a31303a226d61785f6c656e677468223b693a3230303b733a31333a2264656661756c745f76616c7565223b4e3b7d, NULL, 'no'),
-(33, 'Url', 'url', 'link', 'url', NULL, NULL, 'no'),
-(34, 'Tipe', 'tipe', 'link', 'choice', 0x613a353a7b733a31313a2263686f6963655f64617461223b733a37313a226f7267616e69736173695f64756e6961203a204f7267616e69736173692044756e69610a206b656d656e747269616e203a204b656d656e747269616e0a20757074203a20555054223b733a31313a2263686f6963655f74797065223b733a353a22726164696f223b733a31333a2264656661756c745f76616c7565223b4e3b733a31313a226d696e5f63686f69636573223b4e3b733a31313a226d61785f63686f69636573223b4e3b7d, NULL, 'no');
+(36, 'Slug', 'slug', 'event', 'slug', 0x613a323a7b733a31303a2273706163655f74797065223b733a313a222d223b733a31303a22736c75675f6669656c64223b733a343a226e616d61223b7d, NULL, 'no'),
+(37, 'Deskripsi Kegiatan', 'deskripsi', 'event', 'wysiwyg', 0x613a323a7b733a31313a22656469746f725f74797065223b4e3b733a31303a22616c6c6f775f74616773223b4e3b7d, NULL, 'no'),
+(38, 'Waktu Mulai', 'waktu_mulai', 'event', 'datetime', 0x613a353a7b733a383a227573655f74696d65223b733a333a22796573223b733a31303a2273746172745f64617465223b4e3b733a383a22656e645f64617465223b4e3b733a373a2273746f72616765223b4e3b733a31303a22696e7075745f74797065223b733a31303a22646174657069636b6572223b7d, NULL, 'no'),
+(35, 'Nama Kegiatan', 'nama', 'event', 'text', 0x613a323a7b733a31303a226d61785f6c656e677468223b693a3230303b733a31333a2264656661756c745f76616c7565223b4e3b7d, NULL, 'no'),
+(41, 'Gambar Kegiatan', 'gambar', 'event', 'image', 0x613a353a7b733a363a22666f6c646572223b693a313b733a31323a22726573697a655f7769647468223b4e3b733a31333a22726573697a655f686569676874223b4e3b733a31303a226b6565705f726174696f223b4e3b733a31333a22616c6c6f7765645f7479706573223b4e3b7d, NULL, 'no'),
+(53, 'Header Gambar', 'gambar', 'berita', 'image', 0x613a353a7b733a363a22666f6c646572223b693a313b733a31323a22726573697a655f7769647468223b4e3b733a31333a22726573697a655f686569676874223b4e3b733a31303a226b6565705f726174696f223b4e3b733a31333a22616c6c6f7765645f7479706573223b4e3b7d, NULL, 'no'),
+(52, 'Berita Utama', 'berita_utama', 'berita', 'choice', 0x613a353a7b733a31313a2263686f6963655f64617461223b733a333a22596573223b733a31313a2263686f6963655f74797065223b733a31303a22636865636b626f786573223b733a31333a2264656661756c745f76616c7565223b4e3b733a31313a226d696e5f63686f69636573223b4e3b733a31313a226d61785f63686f69636573223b4e3b7d, NULL, 'no'),
+(51, 'Kategori Berita', 'kategori', 'berita', 'choice', 0x613a353a7b733a31313a2263686f6963655f64617461223b733a31373a2257616261680a4461657261680a556d756d223b733a31313a2263686f6963655f74797065223b733a353a22726164696f223b733a31333a2264656661756c745f76616c7565223b4e3b733a31313a226d696e5f63686f69636573223b4e3b733a31313a226d61785f63686f69636573223b4e3b7d, NULL, 'no'),
+(50, 'Berita', 'berita', 'berita', 'wysiwyg', 0x613a323a7b733a31313a22656469746f725f74797065223b733a383a22616476616e636564223b733a31303a22616c6c6f775f74616773223b4e3b7d, NULL, 'no'),
+(48, 'Judul', 'judul', 'berita', 'text', 0x613a323a7b733a31303a226d61785f6c656e677468223b693a3230303b733a31333a2264656661756c745f76616c7565223b4e3b7d, NULL, 'no'),
+(49, 'Slug', 'slug', 'berita', 'slug', 0x613a323a7b733a31303a2273706163655f74797065223b733a313a222d223b733a31303a22736c75675f6669656c64223b733a353a226a7564756c223b7d, NULL, 'no'),
+(54, 'Nama', 'nama', 'video', 'text', 0x613a323a7b733a31303a226d61785f6c656e677468223b693a3230303b733a31333a2264656661756c745f76616c7565223b4e3b7d, NULL, 'no'),
+(55, 'Deskripsi', 'deskripsi', 'video', 'wysiwyg', 0x613a323a7b733a31313a22656469746f725f74797065223b733a383a22616476616e636564223b733a31303a22616c6c6f775f74616773223b4e3b7d, NULL, 'no'),
+(56, 'Link', 'link', 'video', 'url', NULL, NULL, 'no');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `default_data_field_assignments`
+-- Table structure for table `default_data_field_assignments`
 --
 
 CREATE TABLE IF NOT EXISTS `default_data_field_assignments` (
@@ -300,10 +347,10 @@ CREATE TABLE IF NOT EXISTS `default_data_field_assignments` (
   `instructions` text COLLATE utf8_unicode_ci,
   `field_name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=35 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=57 ;
 
 --
--- Dumping data untuk tabel `default_data_field_assignments`
+-- Dumping data for table `default_data_field_assignments`
 --
 
 INSERT INTO `default_data_field_assignments` (`id`, `sort_order`, `stream_id`, `field_id`, `is_required`, `is_unique`, `instructions`, `field_name`) VALUES
@@ -323,18 +370,31 @@ INSERT INTO `default_data_field_assignments` (`id`, `sort_order`, `stream_id`, `
 (14, 12, 3, 14, 'no', 'no', NULL, NULL),
 (15, 13, 3, 15, 'no', 'no', NULL, NULL),
 (16, 14, 3, 16, 'no', 'no', NULL, NULL),
+(41, 7, 11, 41, 'no', 'no', NULL, NULL),
+(40, 6, 11, 40, 'no', 'no', NULL, NULL),
+(39, 5, 11, 39, 'no', 'no', NULL, NULL),
+(38, 4, 11, 38, 'no', 'no', NULL, NULL),
 (25, 1, 8, 25, 'yes', 'no', NULL, NULL),
 (26, 2, 8, 26, 'yes', 'no', NULL, NULL),
 (27, 3, 8, 27, 'no', 'no', NULL, NULL),
 (28, 4, 8, 28, 'no', 'no', NULL, NULL),
-(34, 3, 10, 34, 'no', 'no', NULL, NULL),
-(33, 2, 10, 33, 'yes', 'no', NULL, NULL),
-(32, 1, 10, 32, 'yes', 'no', NULL, NULL);
+(37, 3, 11, 37, 'yes', 'no', NULL, NULL),
+(36, 2, 11, 36, 'yes', 'yes', NULL, NULL),
+(35, 1, 11, 35, 'yes', 'yes', NULL, NULL),
+(53, 6, 13, 53, 'no', 'no', NULL, NULL),
+(52, 5, 13, 52, 'no', 'no', NULL, NULL),
+(51, 4, 13, 51, 'yes', 'no', NULL, NULL),
+(50, 3, 13, 50, 'yes', 'no', NULL, NULL),
+(49, 2, 13, 49, 'yes', 'yes', NULL, NULL),
+(48, 1, 13, 48, 'yes', 'yes', NULL, NULL),
+(54, 1, 14, 54, 'yes', 'no', NULL, NULL),
+(55, 2, 14, 55, 'yes', 'no', NULL, NULL),
+(56, 3, 14, 56, 'no', 'no', NULL, NULL);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `default_data_streams`
+-- Table structure for table `default_data_streams`
 --
 
 CREATE TABLE IF NOT EXISTS `default_data_streams` (
@@ -351,23 +411,25 @@ CREATE TABLE IF NOT EXISTS `default_data_streams` (
   `is_hidden` enum('yes','no') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'no',
   `menu_path` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=11 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=15 ;
 
 --
--- Dumping data untuk tabel `default_data_streams`
+-- Dumping data for table `default_data_streams`
 --
 
 INSERT INTO `default_data_streams` (`id`, `stream_name`, `stream_slug`, `stream_namespace`, `stream_prefix`, `about`, `view_options`, `title_column`, `sorting`, `permissions`, `is_hidden`, `menu_path`) VALUES
 (1, 'lang:blog:blog_title', 'blog', 'blogs', NULL, NULL, 0x613a323a7b693a303b733a323a226964223b693a313b733a373a2263726561746564223b7d, NULL, 'title', NULL, 'no', NULL),
 (2, 'Default', 'def_page_fields', 'pages', NULL, 'A simple page type with a WYSIWYG editor that will get you started adding content.', 0x613a323a7b693a303b733a323a226964223b693a313b733a373a2263726561746564223b7d, NULL, 'title', NULL, 'no', NULL),
 (3, 'lang:user_profile_fields_label', 'profiles', 'users', NULL, 'Profiles for users module', 0x613a313a7b693a303b733a31323a22646973706c61795f6e616d65223b7d, 'display_name', 'title', NULL, 'no', NULL),
+(14, 'lang:video:video', 'videos', 'video', 'video-', NULL, 0x613a343a7b693a303b733a323a226964223b693a313b733a343a226e616d61223b693a323b733a393a226465736b7269707369223b693a333b733a343a226c696e6b223b7d, 'nama', 'title', NULL, 'no', NULL),
 (8, 'lang:kegiatan:kegiatans', 'kegiatans', 'kegiatan', 'kegiatan-', NULL, 0x613a353a7b693a303b733a323a226964223b693a313b733a343a226e616d61223b693a323b733a393a226465736b7269707369223b693a333b733a353a2277616b7475223b693a343b733a363a226c6f6b617369223b7d, 'nama', 'title', NULL, 'no', NULL),
-(10, 'lang:link:links', 'links', 'link', 'link-', NULL, 0x613a343a7b693a303b733a323a226964223b693a313b733a343a226e616d61223b693a323b733a333a2275726c223b693a333b733a343a2274697065223b7d, 'nama', 'title', NULL, 'no', NULL);
+(13, 'lang:berita:beritas', 'beritas', 'berita', 'berita_', NULL, 0x613a343a7b693a303b733a323a226964223b693a313b733a353a226a7564756c223b693a323b733a343a22736c7567223b693a333b733a383a226b617465676f7269223b7d, 'judul', 'title', NULL, 'no', NULL),
+(11, 'lang:event:events', 'events', 'event', 'event_', NULL, 0x613a343a7b693a303b733a323a226964223b693a313b733a343a226e616d61223b693a323b733a31313a2277616b74755f6d756c6169223b693a333b733a31333a2277616b74755f73656c65736169223b7d, 'nama', 'title', NULL, 'no', NULL);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `default_def_page_fields`
+-- Table structure for table `default_def_page_fields`
 --
 
 CREATE TABLE IF NOT EXISTS `default_def_page_fields` (
@@ -378,10 +440,10 @@ CREATE TABLE IF NOT EXISTS `default_def_page_fields` (
   `ordering_count` int(11) DEFAULT NULL,
   `body` longtext COLLATE utf8_unicode_ci,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=6 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=9 ;
 
 --
--- Dumping data untuk tabel `default_def_page_fields`
+-- Dumping data for table `default_def_page_fields`
 --
 
 INSERT INTO `default_def_page_fields` (`id`, `created`, `updated`, `created_by`, `ordering_count`, `body`) VALUES
@@ -389,12 +451,15 @@ INSERT INTO `default_def_page_fields` (`id`, `created`, `updated`, `created_by`,
 (2, '2014-09-24 13:46:18', NULL, 1, NULL, '<p>To contact us please fill out the form below.</p>\n				{{ contact:form name="text|required" email="text|required|valid_email" subject="dropdown|Support|Sales|Feedback|Other" message="textarea" attachment="file|zip" }}\n					<div><label for="name">Name:</label>{{ name }}</div>\n					<div><label for="email">Email:</label>{{ email }}</div>\n					<div><label for="subject">Subject:</label>{{ subject }}</div>\n					<div><label for="message">Message:</label>{{ message }}</div>\n					<div><label for="attachment">Attach  a zip file:</label>{{ attachment }}</div>\n				{{ /contact:form }}'),
 (3, '2014-09-24 13:46:18', NULL, 1, NULL, '{{ search:form class="search-form" }} \n		<input name="q" placeholder="Search terms..." />\n	{{ /search:form }}'),
 (4, '2014-09-24 13:46:18', NULL, 1, NULL, '{{ search:form class="search-form" }} \n		<input name="q" placeholder="Search terms..." />\n	{{ /search:form }}\n\n{{ search:results }}\n\n	{{ total }} results for "{{ query }}".\n\n	<hr />\n\n	{{ entries }}\n\n		<article>\n			<h4>{{ singular }}: <a href="{{ url }}">{{ title }}</a></h4>\n			<p>{{ description }}</p>\n		</article>\n\n	{{ /entries }}\n\n        {{ pagination }}\n\n{{ /search:results }}'),
-(5, '2014-09-24 13:46:18', NULL, 1, NULL, '<p>We cannot find the page you are looking for, please click <a title="Home" href="{{ pages:url id=''1'' }}">here</a> to go to the homepage.</p>');
+(5, '2014-09-24 13:46:18', NULL, 1, NULL, '<p>We cannot find the page you are looking for, please click <a title="Home" href="{{ pages:url id=''1'' }}">here</a> to go to the homepage.</p>'),
+(6, '2014-10-11 11:32:25', '2014-10-11 11:55:36', 1, 1, '<div class="Section1" style="margin: 0px; padding: 0px; page: Section1;">\r\n<div style="margin: 0px; padding: 0px; text-align: center;"><span style="font-size: 12pt; font-family: ''Times New Roman'', serif; font-weight: bold;">PERATURAN MENTERI KESEHATAN REPUBLIK INDONESIA</span><span style="font-weight: bold;">&nbsp;</span><br style="font-weight: bold;" />\r\n<span style="font-size: 12pt; font-family: ''Times New Roman'', serif; font-weight: bold;">NOMOR : 1144/MENKES/PER/VIII/2010</span><span style="font-weight: bold;">&nbsp;</span><br style="font-weight: bold;" />\r\n<span style="font-size: 12pt; font-family: ''Times New Roman'', serif; font-weight: bold;">T E N T A N G</span><span style="font-weight: bold;">&nbsp;</span><br style="font-weight: bold;" />\r\n<span style="font-size: 12pt; font-family: ''Times New Roman'', serif; font-weight: bold;">ORGANISASI DAN TATA KERJA KEMENTERIAN &nbsp;KESEHATAN</span><span style="font-weight: bold;">&nbsp;</span><br style="font-weight: bold;" />\r\n<span style="font-size: 12pt; font-family: ''Times New Roman'', serif; font-weight: bold;">&nbsp;MENTERI KESEHATAN REPUBLIK INDONESIA</span><span style="font-weight: bold;">&nbsp;</span><br style="font-weight: bold;" />\r\n<span style="font-size: 12pt; font-family: ''Times New Roman'', serif; font-weight: bold;">&nbsp;</span><span style="font-weight: bold;">&nbsp;</span><span style="font-size: 12pt; font-family: ''Times New Roman'', serif; font-weight: bold;">&nbsp;</span><span style="font-weight: bold;">&nbsp;</span><br style="font-weight: bold;" />\r\n<span style="font-size: 12pt; font-family: ''Times New Roman'', serif; font-weight: bold;">DIREKTORAT JENDERAL PENGENDALIAN PENYAKIT DAN PENYEHATAN LINGKUNGAN</span><span style="font-weight: bold;">&nbsp;</span><br style="font-weight: bold;" />\r\n<span style="font-size: 12pt; font-family: ''Times New Roman'', serif; font-weight: bold;">&nbsp;</span><span style="font-weight: bold;">&nbsp;</span><br style="font-weight: bold;" />\r\n<span style="font-size: 12pt; font-family: ''Times New Roman'', serif; font-weight: bold;">BAGIAN PERTAMA</span><span style="font-weight: bold;">&nbsp;</span><br style="font-weight: bold;" />\r\n<span style="font-size: 12pt; font-family: ''Times New Roman'', serif; font-weight: bold;">KEDUDUKAN, TUGAS, DAN FUNGSI</span><span style="font-weight: bold;">&nbsp;</span><br style="font-weight: bold;" />\r\n<span style="font-size: 12pt; font-family: ''Times New Roman'', serif; font-weight: bold;">&nbsp;</span><span style="font-weight: bold;">&nbsp;</span><br style="font-weight: bold;" />\r\n<span style="font-size: 12pt; font-family: ''Times New Roman'', serif; font-weight: bold;">Pasal 247</span><span style="font-weight: bold;">&nbsp;</span></div>\r\n<span style="font-size: 12pt; font-family: ''Times New Roman'', serif;">1. Direktorat Jenderal adalah unsur pelaksana yang berada di bawah dan bertanggung jawab kepada Menteri Kesehatan.</span>&nbsp;<br />\r\n<span style="font-size: 12pt; font-family: ''Times New Roman'', serif;">2. Direktorat Jenderal dipimpin oleh Direktur Jenderal.</span>\r\n\r\n<ol start="1" style="margin: 0px 0px 0cm; padding-right: 0px; padding-left: 0px; list-style: none;" type="1">\r\n</ol>\r\n\r\n<div style="margin: 0px; padding: 0px; text-align: center;"><span style="font-size: 12pt; font-family: ''Times New Roman'', serif; font-weight: bold;">Pasal 248</span><span style="font-weight: bold;">&nbsp;</span></div>\r\n<span style="font-size: 12pt; font-family: ''Times New Roman'', serif;">Direktorat Jenderal Pengendalian Penyakit dan Penyehatan Lingkungan mempunyai tugas merumuskan serta melaksanakan kebijakan dan standardisasi teknisdi bidang pengendalian penyakit dan penyehatan lingkungan.</span>&nbsp;<br />\r\n&nbsp;\r\n<div style="margin: 0px; padding: 0px; text-align: center;"><span style="font-size: 12pt; font-family: ''Times New Roman'', serif; font-weight: bold;">Pasal 249</span><span style="font-weight: bold;">&nbsp;</span></div>\r\n<span style="font-size: 12pt; font-family: ''Times New Roman'', serif;">Da</span><span style="font-size: 12pt; font-family: ''Times New Roman'', serif;">lam melaksanakan tugas sebagaimana dimaksud dalam Pasal 248, Direktorat Jenderal Pengendalian Penyakit dan Penyehatan Lingkungan menyelenggarakan fungsi:</span>&nbsp;<br />\r\n<span style="font-size: 12pt; font-family: ''Times New Roman'', serif;">1. perumusan kebijakan di bidang pengendalian penyakit dan penyehatan lingkungan;</span>&nbsp;<br />\r\n<span style="font-size: 12pt; font-family: ''Times New Roman'', serif;">2. pelaksanaan kebijakan di bidang pengendalian penyakit dan penyehatan lingkungan;</span>&nbsp;<br />\r\n<span style="font-size: 12pt; font-family: ''Times New Roman'', serif;">3. penyusunan norma, standar, prosedur, dan kriteria di bidang pengendalian penyakit dan penyehatan lingkungan;</span>&nbsp;<br />\r\n<span style="font-size: 12pt; font-family: ''Times New Roman'', serif;">4. pemberian bimbingan teknis dan evaluasi di bidang pengendalian penyakit dan penyehatan lingkungan; dan</span>&nbsp;<br />\r\n<span style="font-size: 12pt; font-family: ''Times New Roman'', serif;">5. pelaksanaan administrasi Direktorat Jenderal Pengendalian Penyakit dan Penyehatan Lingkungan.</span>\r\n\r\n<ol start="1" style="margin: 0px 0px 0cm; padding-right: 0px; padding-left: 0px; list-style: none;" type="1">\r\n</ol>\r\n<span style="font-size: 12pt; font-family: ''Times New Roman'', serif;">&nbsp;</span>&nbsp;\r\n\r\n<div style="margin: 0px; padding: 0px; text-align: center;"><span style="font-size: 12pt; font-family: ''Times New Roman'', serif; font-weight: bold;">BAGIAN KEDUA</span><span style="font-weight: bold;">&nbsp;</span><br style="font-weight: bold;" />\r\n<span style="font-size: 12pt; font-family: ''Times New Roman'', serif; font-weight: bold;">SUSUNAN ORGANISASI</span><span style="font-weight: bold;">&nbsp;</span><br style="font-weight: bold;" />\r\n<br />\r\n<span style="font-size: 12pt; font-family: ''Times New Roman'', serif; font-weight: bold;">Pasal 250</span><span style="font-weight: bold;">&nbsp;</span></div>\r\n<span style="font-size: 12pt; font-family: ''Times New Roman'', serif;">Direktorat Jenderal Pengendalian Penyakit dan Penyehatan Lingkungan terdiri atas:</span>&nbsp;<br />\r\n<span style="font-size: 12pt; font-family: ''Times New Roman'', serif;">1. Sekretariat Direktorat Jenderal;</span>&nbsp;<br />\r\n<span style="font-size: 12pt; font-family: ''Times New Roman'', serif;">2. Direktorat Surveilans, Imunisasi, Karantina, dan Kesehatan Matra;</span>&nbsp;<br />\r\n<span style="font-size: 12pt; font-family: ''Times New Roman'', serif;">3. Direktorat Pengendalian Penyakit Menular Langsung;</span>&nbsp;<br />\r\n<span style="font-size: 12pt; font-family: ''Times New Roman'', serif;">4. Direktorat Pengendalian Penyakit Bersumber Binatang;</span>&nbsp;<br />\r\n<span style="font-size: 12pt; font-family: ''Times New Roman'', serif;">5. Direktorat Pengendalian Penyakit Tidak Menular; dan</span>&nbsp;<br />\r\n<span style="font-size: 12pt; font-family: ''Times New Roman'', serif;">6. Direktorat Penyehatan Lingkungan.</span>\r\n\r\n<ol start="1" style="margin: 0px 0px 0cm; padding-right: 0px; padding-left: 0px; list-style: none;" type="1">\r\n</ol>\r\n</div>\r\n\r\n<div><br />\r\n<br />\r\n* Untuk lebih lengkapnya bisa dilihat pada link berikut\r\n<div style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; line-height: normal; background-color: rgb(243, 255, 240);"><a href="http://goo.gl/QXMXY" target="_blank"><span style="font-size: 12pt; font-family: ''Times New Roman'', serif;">1. PERMENKES RI No.&nbsp;1144 Tahun 2010 -&nbsp;Organisasi dan Tata Kerja Kementerian Kesehatan RI</span></a><br />\r\n<a href="http://goo.gl/2k6hP" target="notSet"><span style="font-size: 12pt; font-family: ''Times New Roman'', serif;">2.&nbsp;PERMENKES RI No. 2348&nbsp;Tahun 2011 - Kantor Kesehatan Pelabuhan</span></a><br />\r\n<span style="font-size: 12pt; font-family: ''Times New Roman'', serif;"><a href="http://goo.gl/gcjEk">3,&nbsp;</a></span><a href="http://goo.gl/gcjEk"><span style="font-size: 12pt; font-family: ''Times New Roman'', serif;">PERMENKES RI No. 2349&nbsp;Tahun 2011 - BB/BTKL - PP</span></a></div>\r\n<br />\r\n&nbsp;</div>\r\n'),
+(7, '2014-10-11 11:51:54', '2014-10-11 11:56:33', 1, 2, 'Profile Direktorat Jenderal PP dan PL'),
+(8, '2014-10-11 11:53:19', '2014-10-11 11:56:49', 1, 3, '<div style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; line-height: normal; text-align: center; background-color: rgb(243, 255, 240);"><span style="font-weight: bold; font-family: ''times new roman'', times; font-size: medium;">Profil&nbsp;Pengendalian Penyakit dan Penyehatan Lingkungan</span></div>\r\n\r\n<div style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; line-height: normal; text-align: center; background-color: rgb(243, 255, 240);"><span style="font-weight: bold; font-family: ''times new roman'', times; font-size: medium;">TAHUN 2011</span></div>\r\n\r\n<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; line-height: normal; background-color: rgb(243, 255, 240);"><br />\r\n<span style="font-family: ''times new roman'', times; font-size: medium;">Buku Profil Ditjen Pengendalian Penyakit dan Penyehatan Lingkungan Tahun 2011 ini bertujuan memberikan gambaran tentang hasil-hasil kegiatan PP dan PL. Sehingga kita dapat menilai kinerja dari program yang telah dilaksanakan. Program &ndash; program yang telah mencapai target yang telah ditetapkan diharapkan dapat dipertahankan dan program-program yang belum mencapai target untuk dapat ditingkatkan upaya-upaya pada tahun mendatang.</span><br />\r\n<br />\r\n<span style="font-family: ''times new roman'', times; font-size: medium;">Buku ini dapat dijadikan sebagai acuan dalam penyusunan kebijakan dan pelaksaan program pengendalian penyakit dan penyehatan lingkungan.</span><br />\r\n<br />\r\n<span style="font-family: ''times new roman'', times; font-size: medium;">Buku&nbsp;ini disusun berkat kerjasama antara pusat, UPT, dan daerah. Kami ucapkan terimakasih kepada semua pihak yang telah berkontribusi dalam penyusunannya. Kami sangat mengharapkan kritik serta saran guna perbaikan-perbaikan di masa yang akan datang.</span></p>\r\n');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `default_email_templates`
+-- Table structure for table `default_email_templates`
 --
 
 CREATE TABLE IF NOT EXISTS `default_email_templates` (
@@ -412,7 +477,7 @@ CREATE TABLE IF NOT EXISTS `default_email_templates` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=7 ;
 
 --
--- Dumping data untuk tabel `default_email_templates`
+-- Dumping data for table `default_email_templates`
 --
 
 INSERT INTO `default_email_templates` (`id`, `slug`, `name`, `description`, `subject`, `body`, `lang`, `is_default`, `module`) VALUES
@@ -426,7 +491,29 @@ INSERT INTO `default_email_templates` (`id`, `slug`, `name`, `description`, `sub
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `default_files`
+-- Table structure for table `default_event_events`
+--
+
+CREATE TABLE IF NOT EXISTS `default_event_events` (
+  `id` int(9) NOT NULL AUTO_INCREMENT,
+  `created` datetime NOT NULL,
+  `updated` datetime DEFAULT NULL,
+  `created_by` int(11) DEFAULT NULL,
+  `ordering_count` int(11) DEFAULT NULL,
+  `nama` varchar(200) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `slug` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `deskripsi` longtext COLLATE utf8_unicode_ci,
+  `waktu_mulai` datetime DEFAULT NULL,
+  `waktu_selesai` datetime DEFAULT NULL,
+  `lokasi` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `gambar` char(15) COLLATE utf8_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `default_files`
 --
 
 CREATE TABLE IF NOT EXISTS `default_files` (
@@ -454,7 +541,7 @@ CREATE TABLE IF NOT EXISTS `default_files` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `default_file_folders`
+-- Table structure for table `default_file_folders`
 --
 
 CREATE TABLE IF NOT EXISTS `default_file_folders` (
@@ -468,12 +555,19 @@ CREATE TABLE IF NOT EXISTS `default_file_folders` (
   `sort` int(11) NOT NULL DEFAULT '0',
   `hidden` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `default_file_folders`
+--
+
+INSERT INTO `default_file_folders` (`id`, `parent_id`, `slug`, `name`, `location`, `remote_container`, `date_added`, `sort`, `hidden`) VALUES
+(1, 0, 'img-header', 'img_header', 'local', '', 1412783409, 1412783409, 0);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `default_groups`
+-- Table structure for table `default_groups`
 --
 
 CREATE TABLE IF NOT EXISTS `default_groups` (
@@ -484,7 +578,7 @@ CREATE TABLE IF NOT EXISTS `default_groups` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
 
 --
--- Dumping data untuk tabel `default_groups`
+-- Dumping data for table `default_groups`
 --
 
 INSERT INTO `default_groups` (`id`, `name`, `description`) VALUES
@@ -494,7 +588,7 @@ INSERT INTO `default_groups` (`id`, `name`, `description`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `default_kegiatan-kegiatans`
+-- Table structure for table `default_kegiatan-kegiatans`
 --
 
 CREATE TABLE IF NOT EXISTS `default_kegiatan-kegiatans` (
@@ -511,7 +605,7 @@ CREATE TABLE IF NOT EXISTS `default_kegiatan-kegiatans` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
 
 --
--- Dumping data untuk tabel `default_kegiatan-kegiatans`
+-- Dumping data for table `default_kegiatan-kegiatans`
 --
 
 INSERT INTO `default_kegiatan-kegiatans` (`id`, `created`, `updated`, `created_by`, `ordering_count`, `nama`, `deskripsi`, `waktu`, `lokasi`) VALUES
@@ -520,19 +614,27 @@ INSERT INTO `default_kegiatan-kegiatans` (`id`, `created`, `updated`, `created_b
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `default_keywords`
+-- Table structure for table `default_keywords`
 --
 
 CREATE TABLE IF NOT EXISTS `default_keywords` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `default_keywords`
+--
+
+INSERT INTO `default_keywords` (`id`, `name`) VALUES
+(1, 'tupoksi pppl depkes'),
+(2, 'tugas pokok dan fungsi pppl');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `default_keywords_applied`
+-- Table structure for table `default_keywords_applied`
 --
 
 CREATE TABLE IF NOT EXISTS `default_keywords_applied` (
@@ -540,40 +642,20 @@ CREATE TABLE IF NOT EXISTS `default_keywords_applied` (
   `hash` char(32) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
   `keyword_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `default_keywords_applied`
+--
+
+INSERT INTO `default_keywords_applied` (`id`, `hash`, `keyword_id`) VALUES
+(4, 'a4e79ff46212294313e1a4e5e10f4010', 1),
+(3, 'a4e79ff46212294313e1a4e5e10f4010', 2);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `default_link-links`
---
-
-CREATE TABLE IF NOT EXISTS `default_link-links` (
-  `id` int(9) NOT NULL AUTO_INCREMENT,
-  `created` datetime NOT NULL,
-  `updated` datetime DEFAULT NULL,
-  `created_by` int(11) DEFAULT NULL,
-  `ordering_count` int(11) DEFAULT NULL,
-  `nama` varchar(200) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `url` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `tipe` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=5 ;
-
---
--- Dumping data untuk tabel `default_link-links`
---
-
-INSERT INTO `default_link-links` (`id`, `created`, `updated`, `created_by`, `ordering_count`, `nama`, `url`, `tipe`) VALUES
-(1, '2014-09-28 23:51:06', NULL, 1, 1, 'a', 'http://www.who.int', 'organisasi_dunia'),
-(2, '2014-09-29 00:08:22', NULL, 1, 2, 'Facebook', 'http://www.facebook.com', 'kementrian'),
-(3, '2014-09-29 00:08:40', NULL, 1, 3, 'Google', 'http://www.google.com', 'upt'),
-(4, '2014-09-29 00:08:55', NULL, 1, 4, 'Gmail', 'http://www.google.com', 'upt');
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `default_migrations`
+-- Table structure for table `default_migrations`
 --
 
 CREATE TABLE IF NOT EXISTS `default_migrations` (
@@ -581,7 +663,7 @@ CREATE TABLE IF NOT EXISTS `default_migrations` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data untuk tabel `default_migrations`
+-- Dumping data for table `default_migrations`
 --
 
 INSERT INTO `default_migrations` (`version`) VALUES
@@ -590,7 +672,7 @@ INSERT INTO `default_migrations` (`version`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `default_modules`
+-- Table structure for table `default_modules`
 --
 
 CREATE TABLE IF NOT EXISTS `default_modules` (
@@ -611,10 +693,10 @@ CREATE TABLE IF NOT EXISTS `default_modules` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `slug` (`slug`),
   KEY `enabled` (`enabled`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=40 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=48 ;
 
 --
--- Dumping data untuk tabel `default_modules`
+-- Dumping data for table `default_modules`
 --
 
 INSERT INTO `default_modules` (`id`, `name`, `slug`, `version`, `type`, `description`, `skip_xss`, `is_frontend`, `is_backend`, `menu`, `enabled`, `installed`, `is_core`, `updated_on`) VALUES
@@ -640,13 +722,14 @@ INSERT INTO `default_modules` (`id`, `name`, `slug`, `version`, `type`, `descrip
 (19, 'a:25:{s:2:"en";s:9:"Variables";s:2:"ar";s:20:"المتغيّرات";s:2:"br";s:10:"Variáveis";s:2:"pt";s:10:"Variáveis";s:2:"cs";s:10:"Proměnné";s:2:"da";s:8:"Variable";s:2:"de";s:9:"Variablen";s:2:"el";s:20:"Μεταβλητές";s:2:"es";s:9:"Variables";s:2:"fa";s:16:"متغییرها";s:2:"fi";s:9:"Muuttujat";s:2:"fr";s:9:"Variables";s:2:"he";s:12:"משתנים";s:2:"id";s:8:"Variabel";s:2:"it";s:9:"Variabili";s:2:"lt";s:10:"Kintamieji";s:2:"nl";s:10:"Variabelen";s:2:"pl";s:7:"Zmienne";s:2:"ru";s:20:"Переменные";s:2:"sl";s:13:"Spremenljivke";s:2:"tw";s:12:"系統變數";s:2:"cn";s:12:"系统变数";s:2:"th";s:18:"ตัวแปร";s:2:"se";s:9:"Variabler";s:2:"hu";s:10:"Változók";}', 'variables', '1.0.0', NULL, 'a:25:{s:2:"en";s:59:"Manage global variables that can be accessed from anywhere.";s:2:"ar";s:97:"إدارة المُتغيّرات العامة لاستخدامها في أرجاء الموقع.";s:2:"br";s:61:"Gerencia as variáveis globais acessíveis de qualquer lugar.";s:2:"pt";s:58:"Gerir as variáveis globais acessíveis de qualquer lugar.";s:2:"cs";s:56:"Spravujte globální proměnné přístupné odkudkoliv.";s:2:"da";s:51:"Håndtér globale variable som kan tilgås overalt.";s:2:"de";s:74:"Verwaltet globale Variablen, auf die von überall zugegriffen werden kann.";s:2:"el";s:129:"Διαχείριση μεταβλητών που είναι προσβάσιμες από παντού στον ιστότοπο.";s:2:"es";s:50:"Manage global variables to access from everywhere.";s:2:"fa";s:136:"مدیریت متغییر های جامع که می توانند در هر جای سایت مورد استفاده قرار بگیرند";s:2:"fi";s:66:"Hallitse globaali muuttujia, joihin pääsee käsiksi mistä vain.";s:2:"fr";s:92:"Gérer des variables globales pour pouvoir y accéder depuis n''importe quel endroit du site.";s:2:"he";s:96:"ניהול משתנים גלובליים אשר ניתנים להמרה בכל חלקי האתר";s:2:"id";s:59:"Mengatur variabel global yang dapat diakses dari mana saja.";s:2:"it";s:58:"Gestisci le variabili globali per accedervi da ogni parte.";s:2:"lt";s:64:"Globalių kintamujų tvarkymas kurie yra pasiekiami iš bet kur.";s:2:"nl";s:54:"Beheer globale variabelen die overal beschikbaar zijn.";s:2:"pl";s:86:"Zarządzaj globalnymi zmiennymi do których masz dostęp z każdego miejsca aplikacji.";s:2:"ru";s:136:"Управление глобальными переменными, которые доступны в любом месте сайта.";s:2:"sl";s:53:"Urejanje globalnih spremenljivk za dostop od kjerkoli";s:2:"th";s:148:"จัดการตัวแปรทั่วไปโดยที่สามารถเข้าถึงได้จากทุกที่.";s:2:"tw";s:45:"管理此網站內可存取的全局變數。";s:2:"cn";s:45:"管理此网站内可存取的全局变数。";s:2:"hu";s:62:"Globális változók kezelése a hozzáféréshez, bárhonnan.";s:2:"se";s:66:"Hantera globala variabler som kan avändas över hela webbplatsen.";}', 0, 0, 1, 'data', 1, 1, 1, 1411570810),
 (20, 'a:23:{s:2:"en";s:7:"Widgets";s:2:"br";s:7:"Widgets";s:2:"pt";s:7:"Widgets";s:2:"cs";s:7:"Widgety";s:2:"da";s:7:"Widgets";s:2:"de";s:7:"Widgets";s:2:"el";s:7:"Widgets";s:2:"es";s:7:"Widgets";s:2:"fa";s:13:"ویجت ها";s:2:"fi";s:9:"Vimpaimet";s:2:"fr";s:7:"Widgets";s:2:"id";s:6:"Widget";s:2:"it";s:7:"Widgets";s:2:"lt";s:11:"Papildiniai";s:2:"nl";s:7:"Widgets";s:2:"ru";s:14:"Виджеты";s:2:"sl";s:9:"Vtičniki";s:2:"tw";s:9:"小組件";s:2:"cn";s:9:"小组件";s:2:"hu";s:9:"Widget-ek";s:2:"th";s:21:"วิดเจ็ต";s:2:"se";s:8:"Widgetar";s:2:"ar";s:14:"الودجتس";}', 'widgets', '1.2.0', NULL, 'a:23:{s:2:"en";s:69:"Manage small sections of self-contained logic in blocks or "Widgets".";s:2:"ar";s:132:"إدارة أقسام صغيرة من البرمجيات في مساحات الموقع أو ما يُسمّى بالـ"ودجتس".";s:2:"br";s:77:"Gerenciar pequenas seções de conteúdos em bloco conhecidos como "Widgets".";s:2:"pt";s:74:"Gerir pequenas secções de conteúdos em bloco conhecidos como "Widgets".";s:2:"cs";s:56:"Spravujte malé funkční části webu neboli "Widgety".";s:2:"da";s:74:"Håndter små sektioner af selv-opretholdt logik i blokke eller "Widgets".";s:2:"de";s:62:"Verwaltet kleine, eigentständige Bereiche, genannt "Widgets".";s:2:"el";s:149:"Διαχείριση μικρών τμημάτων αυτόνομης προγραμματιστικής λογικής σε πεδία ή "Widgets".";s:2:"es";s:75:"Manejar pequeñas secciones de lógica autocontenida en bloques o "Widgets"";s:2:"fa";s:76:"مدیریت قسمت های کوچکی از سایت به طور مستقل";s:2:"fi";s:81:"Hallitse pieniä osioita, jotka sisältävät erillisiä lohkoja tai "Vimpaimia".";s:2:"fr";s:41:"Gérer des mini application ou "Widgets".";s:2:"id";s:101:"Mengatur bagian-bagian kecil dari blok-blok yang memuat sesuatu atau dikenal dengan istilah "Widget".";s:2:"it";s:70:"Gestisci piccole sezioni di logica a se stante in blocchi o "Widgets".";s:2:"lt";s:43:"Nedidelių, savarankiškų blokų valdymas.";s:2:"nl";s:75:"Beheer kleine onderdelen die zelfstandige logica bevatten, ofwel "Widgets".";s:2:"ru";s:91:"Управление небольшими, самостоятельными блоками.";s:2:"sl";s:61:"Urejanje manjših delov blokov strani ti. Vtičniki (Widgets)";s:2:"tw";s:103:"可將小段的程式碼透過小組件來管理。即所謂 "Widgets"，或稱為小工具、部件。";s:2:"cn";s:103:"可将小段的程式码透过小组件来管理。即所谓 "Widgets"，或称为小工具、部件。";s:2:"hu";s:56:"Önálló kis logikai tömbök vagy widget-ek kezelése.";s:2:"th";s:152:"จัดการส่วนเล็ก ๆ ในรูปแบบของตัวเองในบล็อกหรือวิดเจ็ต";s:2:"se";s:83:"Hantera små sektioner med egen logik och innehåll på olika delar av webbplatsen.";}', 1, 0, 1, 'content', 1, 1, 1, 1411570810),
 (21, 'a:10:{s:2:"en";s:7:"WYSIWYG";s:2:"br";s:7:"WYSIWYG";s:2:"fa";s:7:"WYSIWYG";s:2:"fr";s:7:"WYSIWYG";s:2:"pt";s:7:"WYSIWYG";s:2:"se";s:15:"HTML-redigerare";s:2:"tw";s:7:"WYSIWYG";s:2:"cn";s:7:"WYSIWYG";s:2:"ar";s:27:"المحرر الرسومي";s:2:"it";s:7:"WYSIWYG";}', 'wysiwyg', '1.0.0', NULL, 'a:11:{s:2:"en";s:60:"Provides the WYSIWYG editor for PyroCMS powered by CKEditor.";s:2:"br";s:64:"Provém o editor WYSIWYG para o PyroCMS fornecido pelo CKEditor.";s:2:"fa";s:73:"ویرایشگر WYSIWYG که توسطCKEditor ارائه شده است. ";s:2:"fr";s:63:"Fournit un éditeur WYSIWYG pour PyroCMS propulsé par CKEditor";s:2:"pt";s:61:"Fornece o editor WYSIWYG para o PyroCMS, powered by CKEditor.";s:2:"el";s:113:"Παρέχει τον επεξεργαστή WYSIWYG για το PyroCMS, χρησιμοποιεί το CKEDitor.";s:2:"se";s:37:"Redigeringsmodul för HTML, CKEditor.";s:2:"tw";s:83:"提供 PyroCMS 所見即所得（WYSIWYG）編輯器，由 CKEditor 技術提供。";s:2:"cn";s:83:"提供 PyroCMS 所见即所得（WYSIWYG）编辑器，由 CKEditor 技术提供。";s:2:"ar";s:76:"توفر المُحرّر الرسومي لـPyroCMS من خلال CKEditor.";s:2:"it";s:57:"Fornisce l''editor WYSIWYG per PtroCMS creato con CKEditor";}', 0, 0, 0, '0', 1, 1, 1, 1411570810),
-(27, 'a:1:{s:2:"en";s:8:"Kegiatan";}', 'kegiatan', '1.0', NULL, 'a:1:{s:2:"en";s:20:"Kegiatan Ditjen PPPL";}', 0, 1, 1, 'content', 1, 1, 0, 1411904603),
-(37, 'a:1:{s:2:"en";s:4:"Link";}', 'link', '1.0', NULL, 'a:1:{s:2:"en";s:11:"Link module";}', 0, 1, 1, 'content', 1, 1, 0, 1411948207);
+(46, 'a:2:{s:2:"en";s:4:"News";s:2:"id";s:6:"Berita";}', 'berita', '1.0.1', NULL, 'a:2:{s:2:"en";s:11:"News module";s:2:"id";s:12:"Modul berita";}', 0, 1, 1, 'content', 1, 1, 0, 1413033796),
+(47, 'a:1:{s:2:"en";s:5:"Video";}', 'video', '1.0', NULL, 'a:1:{s:2:"en";s:17:"Video Ditjen PPPL";}', 0, 1, 1, 'content', 1, 1, 0, 1413099576),
+(43, 'a:2:{s:2:"en";s:5:"Event";s:2:"id";s:8:"Kegiatan";}', 'event', '1.0', NULL, 'a:2:{s:2:"en";s:12:"Event module";s:2:"id";s:14:"Modul Kegiatan";}', 0, 1, 1, 'content', 1, 1, 0, 1412783585);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `default_navigation_groups`
+-- Table structure for table `default_navigation_groups`
 --
 
 CREATE TABLE IF NOT EXISTS `default_navigation_groups` (
@@ -655,21 +738,24 @@ CREATE TABLE IF NOT EXISTS `default_navigation_groups` (
   `abbrev` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`),
   KEY `abbrev` (`abbrev`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=4 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=7 ;
 
 --
--- Dumping data untuk tabel `default_navigation_groups`
+-- Dumping data for table `default_navigation_groups`
 --
 
 INSERT INTO `default_navigation_groups` (`id`, `title`, `abbrev`) VALUES
 (1, 'Header', 'header'),
 (2, 'Sidebar', 'sidebar'),
-(3, 'Footer', 'footer');
+(3, 'Footer', 'footer'),
+(4, 'Organisasi Dunia', 'organisasi-dunia'),
+(5, 'Kementrian', 'kementrian'),
+(6, 'Upt', 'upt');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `default_navigation_links`
+-- Table structure for table `default_navigation_links`
 --
 
 CREATE TABLE IF NOT EXISTS `default_navigation_links` (
@@ -688,21 +774,37 @@ CREATE TABLE IF NOT EXISTS `default_navigation_links` (
   `class` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
   PRIMARY KEY (`id`),
   KEY `navigation_group_id` (`navigation_group_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=4 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=21 ;
 
 --
--- Dumping data untuk tabel `default_navigation_links`
+-- Dumping data for table `default_navigation_links`
 --
 
 INSERT INTO `default_navigation_links` (`id`, `title`, `parent`, `link_type`, `page_id`, `module_name`, `url`, `uri`, `navigation_group_id`, `position`, `target`, `restricted_to`, `class`) VALUES
-(1, 'Home', NULL, 'page', 1, '', '', '', 1, 1, NULL, NULL, ''),
-(2, 'Blog', NULL, 'module', NULL, 'blog', '', '', 1, 2, NULL, NULL, ''),
-(3, 'Contact', NULL, 'page', 2, '', '', '', 1, 3, NULL, NULL, '');
+(1, 'Home', 0, 'page', 1, '', '', '', 1, 0, NULL, NULL, ''),
+(2, 'Blog', 0, 'module', NULL, 'blog', '', '', 1, 1, NULL, NULL, ''),
+(3, 'Contact', 0, 'page', 2, '', '', '', 1, 5, NULL, NULL, ''),
+(4, 'Tugas Pokok dan Fungsi', 5, 'page', 6, '', '', '', 1, 0, '', '0', ''),
+(5, 'Profile', 0, 'page', 7, '', '', '', 1, 6, '', '0', ''),
+(6, 'Buku Profil ', 5, 'page', 8, '', '', '', 1, 1, '', '0', ''),
+(7, 'Berita', 0, 'module', 0, 'berita', '', '', 1, 2, '', '0', ''),
+(8, 'Event', 0, 'module', 0, 'event', '', '', 1, 3, '', '0', ''),
+(9, 'Video', 0, 'module', 0, 'video', '', '', 1, 4, '', '0', ''),
+(10, 'WHO', NULL, 'url', 0, '', 'http://www.who.org/', '', 4, 1, '_blank', '0', ''),
+(11, 'CDC', NULL, 'url', 0, '', 'http://www.cdc.gov/', '', 4, 2, '_blank', '0', ''),
+(14, 'Asean Plus3 Eid', NULL, 'url', 0, '', 'http://www.aseanplus3-eid.info/', '', 4, 5, '_blank', '0', ''),
+(13, 'WHO SEARO', NULL, 'url', 0, '', 'http://www.searo.who.int/', '', 4, 4, '_blank', '0', ''),
+(15, 'Kemenkes', NULL, 'url', 0, '', 'http://www.depkes.go.id/', '', 5, 1, '_blank', '0', ''),
+(16, 'Ditjen Bina Gizi dan KIA', NULL, 'url', 0, '', 'http://gizikia.depkes.go.id/', '', 5, 2, '_blank', '0', ''),
+(17, 'Ditjen Bina Upaya Kesehatan', NULL, 'url', 0, '', 'http://buk.depkes.go.id/', '', 5, 3, '_blank', '0', ''),
+(18, 'Ditjen Binfair dan Alkes', NULL, 'url', 0, '', 'http://binfar.depkes.go.id/', '', 5, 4, '_blank', '0', ''),
+(19, 'Ditjen Litbangkes', NULL, 'url', 0, '', 'http://www.litbang.depkes.go.id/', '', 5, 5, '_blank', '0', ''),
+(20, 'Ditjen PPSDM Kes', NULL, 'url', 0, '', 'http://bppsdmk.depkes.go.id/', '', 5, 6, '_blank', '0', '');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `default_pages`
+-- Table structure for table `default_pages`
 --
 
 CREATE TABLE IF NOT EXISTS `default_pages` (
@@ -733,10 +835,10 @@ CREATE TABLE IF NOT EXISTS `default_pages` (
   PRIMARY KEY (`id`),
   KEY `slug` (`slug`),
   KEY `parent_id` (`parent_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=6 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=9 ;
 
 --
--- Dumping data untuk tabel `default_pages`
+-- Dumping data for table `default_pages`
 --
 
 INSERT INTO `default_pages` (`id`, `slug`, `class`, `title`, `uri`, `parent_id`, `type_id`, `entry_id`, `css`, `js`, `meta_title`, `meta_keywords`, `meta_robots_no_index`, `meta_robots_no_follow`, `meta_description`, `rss_enabled`, `comments_enabled`, `status`, `created_on`, `updated_on`, `restricted_to`, `is_home`, `strict_uri`, `order`) VALUES
@@ -744,12 +846,15 @@ INSERT INTO `default_pages` (`id`, `slug`, `class`, `title`, `uri`, `parent_id`,
 (2, 'contact', '', 'Contact', 'contact', 0, '1', '2', NULL, NULL, NULL, '', NULL, NULL, NULL, 0, 0, 'live', 1411566378, 0, '', 0, 1, 1411566378),
 (3, 'search', '', 'Search', 'search', 0, '1', '3', NULL, NULL, NULL, '', NULL, NULL, NULL, 0, 0, 'live', 1411566378, 0, '', 0, 1, 1411566378),
 (4, 'results', '', 'Results', 'search/results', 3, '1', '4', NULL, NULL, NULL, '', NULL, NULL, NULL, 0, 0, 'live', 1411566378, 0, '', 0, 0, 1411566378),
-(5, '404', '', 'Page missing', '404', 0, '1', '5', NULL, NULL, NULL, '', NULL, NULL, NULL, 0, 0, 'live', 1411566378, 0, '', 0, 1, 1411566378);
+(5, '404', '', 'Page missing', '404', 0, '1', '5', NULL, NULL, NULL, '', NULL, NULL, NULL, 0, 0, 'live', 1411566378, 0, '', 0, 1, 1411566378),
+(6, 'tugas-pokok-dan-fungsi', '', 'Tugas Pokok dan Fungsi', 'tugas-pokok-dan-fungsi', 0, '1', '6', '', '', '', 'a4e79ff46212294313e1a4e5e10f4010', 0, 0, '', 0, 0, 'live', 1413027145, 1413028536, '0', 0, 1, 1413027145),
+(7, 'profile', '', 'Profile', 'profile', 0, '1', '7', '', '', '', '', 0, 0, '', 0, 0, 'live', 1413028314, 1413028593, '0', 0, 1, 1413028314),
+(8, 'buku-profil-pengendalian-penyakit-dan-penyehatan-lingkungan', '', 'Buku Profil Pengendalian Penyakit dan Penyehatan Lingkungan', 'buku-profil-pengendalian-penyakit-dan-penyehatan-lingkungan', 0, '1', '8', '', '', '', '', 0, 0, '', 0, 0, 'live', 1413028399, 1413028609, '0', 0, 1, 1413028399);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `default_page_types`
+-- Table structure for table `default_page_types`
 --
 
 CREATE TABLE IF NOT EXISTS `default_page_types` (
@@ -773,7 +878,7 @@ CREATE TABLE IF NOT EXISTS `default_page_types` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
 
 --
--- Dumping data untuk tabel `default_page_types`
+-- Dumping data for table `default_page_types`
 --
 
 INSERT INTO `default_page_types` (`id`, `slug`, `title`, `description`, `stream_id`, `meta_title`, `meta_keywords`, `meta_description`, `body`, `css`, `js`, `theme_layout`, `updated_on`, `save_as_files`, `content_label`, `title_label`) VALUES
@@ -782,7 +887,7 @@ INSERT INTO `default_page_types` (`id`, `slug`, `title`, `description`, `stream_
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `default_permissions`
+-- Table structure for table `default_permissions`
 --
 
 CREATE TABLE IF NOT EXISTS `default_permissions` (
@@ -797,7 +902,7 @@ CREATE TABLE IF NOT EXISTS `default_permissions` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `default_profiles`
+-- Table structure for table `default_profiles`
 --
 
 CREATE TABLE IF NOT EXISTS `default_profiles` (
@@ -828,7 +933,7 @@ CREATE TABLE IF NOT EXISTS `default_profiles` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
 
 --
--- Dumping data untuk tabel `default_profiles`
+-- Dumping data for table `default_profiles`
 --
 
 INSERT INTO `default_profiles` (`id`, `created`, `updated`, `created_by`, `ordering_count`, `user_id`, `display_name`, `first_name`, `last_name`, `company`, `lang`, `bio`, `dob`, `gender`, `phone`, `mobile`, `address_line1`, `address_line2`, `address_line3`, `postcode`, `website`, `updated_on`) VALUES
@@ -837,7 +942,7 @@ INSERT INTO `default_profiles` (`id`, `created`, `updated`, `created_by`, `order
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `default_redirects`
+-- Table structure for table `default_redirects`
 --
 
 CREATE TABLE IF NOT EXISTS `default_redirects` (
@@ -852,7 +957,7 @@ CREATE TABLE IF NOT EXISTS `default_redirects` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `default_search_index`
+-- Table structure for table `default_search_index`
 --
 
 CREATE TABLE IF NOT EXISTS `default_search_index` (
@@ -871,10 +976,10 @@ CREATE TABLE IF NOT EXISTS `default_search_index` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `unique` (`module`,`entry_key`,`entry_id`(190)),
   FULLTEXT KEY `full search` (`title`,`description`,`keywords`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=6 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=10 ;
 
 --
--- Dumping data untuk tabel `default_search_index`
+-- Dumping data for table `default_search_index`
 --
 
 INSERT INTO `default_search_index` (`id`, `title`, `description`, `keywords`, `keyword_hash`, `module`, `entry_key`, `entry_plural`, `entry_id`, `uri`, `cp_edit_uri`, `cp_delete_uri`) VALUES
@@ -882,12 +987,15 @@ INSERT INTO `default_search_index` (`id`, `title`, `description`, `keywords`, `k
 (2, 'Contact', '', NULL, NULL, 'pages', 'pages:page', 'pages:pages', '2', 'contact', 'admin/pages/edit/2', 'admin/pages/delete/2'),
 (3, 'Search', '', NULL, NULL, 'pages', 'pages:page', 'pages:pages', '3', 'search', 'admin/pages/edit/3', 'admin/pages/delete/3'),
 (4, 'Results', '', NULL, NULL, 'pages', 'pages:page', 'pages:pages', '4', 'search/results', 'admin/pages/edit/4', 'admin/pages/delete/4'),
-(5, 'Page missing', '', NULL, NULL, 'pages', 'pages:page', 'pages:pages', '5', '404', 'admin/pages/edit/5', 'admin/pages/delete/5');
+(5, 'Page missing', '', NULL, NULL, 'pages', 'pages:page', 'pages:pages', '5', '404', 'admin/pages/edit/5', 'admin/pages/delete/5'),
+(6, 'Tugas Pokok dan Fungsi', '', 'tugas pokok dan fungsi pppl, tupoksi pppl depkes', 'a4e79ff46212294313e1a4e5e10f4010', 'pages', 'pages:page', 'pages:pages', '6', 'tugas-pokok-dan-fungsi', 'admin/pages/edit/6', 'admin/pages/delete/6'),
+(8, 'Profile', '', NULL, NULL, 'pages', 'pages:page', 'pages:pages', '7', 'profile', 'admin/pages/edit/7', 'admin/pages/delete/7'),
+(9, 'Buku Profil Pengendalian Penyakit dan Penyehatan Lingkungan', '', NULL, NULL, 'pages', 'pages:page', 'pages:pages', '8', 'buku-profil-pengendalian-penyakit-dan-penyehatan-lingkungan', 'admin/pages/edit/8', 'admin/pages/delete/8');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `default_settings`
+-- Table structure for table `default_settings`
 --
 
 CREATE TABLE IF NOT EXISTS `default_settings` (
@@ -908,7 +1016,7 @@ CREATE TABLE IF NOT EXISTS `default_settings` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data untuk tabel `default_settings`
+-- Dumping data for table `default_settings`
 --
 
 INSERT INTO `default_settings` (`slug`, `title`, `description`, `type`, `default`, `value`, `options`, `is_required`, `is_gui`, `module`, `order`) VALUES
@@ -943,7 +1051,7 @@ INSERT INTO `default_settings` (`slug`, `title`, `description`, `type`, `default
 ('api_user_keys', 'API User Keys', 'Allow users to sign up for API keys (if the API is Enabled).', 'select', '0', '0', '0=Disabled|1=Enabled', 0, 0, 'api', 0),
 ('cdn_domain', 'CDN Domain', 'CDN domains allow you to offload static content to various edge servers, like Amazon CloudFront or MaxCDN.', 'text', '', '', '', 0, 1, 'integration', 1000),
 ('addons_upload', 'Addons Upload Permissions', 'Keeps mere admins from uploading addons by default', 'text', '0', '1', '', 1, 0, '', 0),
-('default_theme', 'Default Theme', 'Select the theme you want users to see by default.', '', 'default', 'whoza', 'func:get_themes', 1, 0, '', 0),
+('default_theme', 'Default Theme', 'Select the theme you want users to see by default.', '', 'default', 'wozo', 'func:get_themes', 1, 0, '', 0),
 ('admin_theme', 'Control Panel Theme', 'Select the theme for the control panel.', '', '', 'pyrocms', 'func:get_themes', 1, 0, '', 0),
 ('akismet_api_key', 'Akismet API Key', 'Akismet is a spam-blocker from the WordPress team. It keeps spam under control without forcing users to get past human-checking CAPTCHA forms.', 'text', '', '', '', 0, 1, 'integration', 981),
 ('enable_comments', 'Enable Comments', 'Enable comments.', 'radio', '1', '1', '1=Enabled|0=Disabled', 1, 1, 'comments', 968),
@@ -970,7 +1078,7 @@ INSERT INTO `default_settings` (`slug`, `title`, `description`, `type`, `default
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `default_theme_options`
+-- Table structure for table `default_theme_options`
 --
 
 CREATE TABLE IF NOT EXISTS `default_theme_options` (
@@ -988,7 +1096,7 @@ CREATE TABLE IF NOT EXISTS `default_theme_options` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=11 ;
 
 --
--- Dumping data untuk tabel `default_theme_options`
+-- Dumping data for table `default_theme_options`
 --
 
 INSERT INTO `default_theme_options` (`id`, `slug`, `title`, `description`, `type`, `default`, `value`, `options`, `is_required`, `theme`) VALUES
@@ -1006,7 +1114,7 @@ INSERT INTO `default_theme_options` (`id`, `slug`, `title`, `description`, `type
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `default_users`
+-- Table structure for table `default_users`
 --
 
 CREATE TABLE IF NOT EXISTS `default_users` (
@@ -1028,16 +1136,16 @@ CREATE TABLE IF NOT EXISTS `default_users` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Registered User Information' AUTO_INCREMENT=2 ;
 
 --
--- Dumping data untuk tabel `default_users`
+-- Dumping data for table `default_users`
 --
 
 INSERT INTO `default_users` (`id`, `email`, `password`, `salt`, `group_id`, `ip_address`, `active`, `activation_code`, `created_on`, `last_login`, `username`, `forgotten_password_code`, `remember_code`) VALUES
-(1, 'rizaqpratama@gmail.com', 'bcaed503772428f511f7f6ba2100c664d194e2e9', '9da3e', 1, '', 1, '', 1411566374, 1411918126, 'rizaqpratama', NULL, '5b87b4d5ad05a8a50fe616472a6d0c78137b65c7');
+(1, 'rizaqpratama@gmail.com', 'bcaed503772428f511f7f6ba2100c664d194e2e9', '9da3e', 1, '', 1, '', 1411566374, 1413095717, 'rizaqpratama', NULL, '5b87b4d5ad05a8a50fe616472a6d0c78137b65c7');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `default_variables`
+-- Table structure for table `default_variables`
 --
 
 CREATE TABLE IF NOT EXISTS `default_variables` (
@@ -1050,7 +1158,32 @@ CREATE TABLE IF NOT EXISTS `default_variables` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `default_widgets`
+-- Table structure for table `default_video-videos`
+--
+
+CREATE TABLE IF NOT EXISTS `default_video-videos` (
+  `id` int(9) NOT NULL AUTO_INCREMENT,
+  `created` datetime NOT NULL,
+  `updated` datetime DEFAULT NULL,
+  `created_by` int(11) DEFAULT NULL,
+  `ordering_count` int(11) DEFAULT NULL,
+  `nama` varchar(200) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `deskripsi` longtext COLLATE utf8_unicode_ci,
+  `link` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `default_video-videos`
+--
+
+INSERT INTO `default_video-videos` (`id`, `created`, `updated`, `created_by`, `ordering_count`, `nama`, `deskripsi`, `link`) VALUES
+(1, '2014-10-12 07:42:07', NULL, 1, 1, 'Lokakarya Pendidikan Pegawai Negeri Sipil 2013', 'Lokakarya pendidikan pegawai negeri sipil 2013', 'https://www.youtube.com/watch?v=v1X8ow9fA8k');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `default_widgets`
 --
 
 CREATE TABLE IF NOT EXISTS `default_widgets` (
@@ -1065,10 +1198,10 @@ CREATE TABLE IF NOT EXISTS `default_widgets` (
   `order` int(10) NOT NULL DEFAULT '0',
   `updated_on` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=11 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=18 ;
 
 --
--- Dumping data untuk tabel `default_widgets`
+-- Dumping data for table `default_widgets`
 --
 
 INSERT INTO `default_widgets` (`id`, `slug`, `title`, `description`, `author`, `website`, `version`, `enabled`, `order`, `updated_on`) VALUES
@@ -1081,12 +1214,18 @@ INSERT INTO `default_widgets` (`id`, `slug`, `title`, `description`, `author`, `
 (7, 'archive', 'a:8:{s:2:"en";s:7:"Archive";s:2:"br";s:15:"Arquivo do Blog";s:2:"fa";s:10:"آرشیو";s:2:"pt";s:15:"Arquivo do Blog";s:2:"el";s:33:"Αρχείο Ιστολογίου";s:2:"fr";s:16:"Archives du Blog";s:2:"ru";s:10:"Архив";s:2:"id";s:7:"Archive";}', 'a:8:{s:2:"en";s:64:"Display a list of old months with links to posts in those months";s:2:"br";s:95:"Mostra uma lista navegação cronológica contendo o índice dos artigos publicados mensalmente";s:2:"fa";s:101:"نمایش لیست ماه های گذشته به همراه لینک به پست های مربوطه";s:2:"pt";s:95:"Mostra uma lista navegação cronológica contendo o índice dos artigos publicados mensalmente";s:2:"el";s:155:"Προβάλλει μια λίστα μηνών και συνδέσμους σε αναρτήσεις που έγιναν σε κάθε από αυτούς";s:2:"fr";s:95:"Permet d''afficher une liste des mois passés avec des liens vers les posts relatifs à ces mois";s:2:"ru";s:114:"Выводит список по месяцам со ссылками на записи в этих месяцах";s:2:"id";s:63:"Menampilkan daftar bulan beserta tautan post di setiap bulannya";}', 'Phil Sturgeon', 'http://philsturgeon.co.uk/', '1.0.0', 1, 7, 1411571391),
 (8, 'blog_categories', 'a:8:{s:2:"en";s:15:"Blog Categories";s:2:"br";s:18:"Categorias do Blog";s:2:"pt";s:18:"Categorias do Blog";s:2:"el";s:41:"Κατηγορίες Ιστολογίου";s:2:"fr";s:19:"Catégories du Blog";s:2:"ru";s:29:"Категории Блога";s:2:"id";s:12:"Kateori Blog";s:2:"fa";s:28:"مجموعه های بلاگ";}', 'a:8:{s:2:"en";s:30:"Show a list of blog categories";s:2:"br";s:57:"Mostra uma lista de navegação com as categorias do Blog";s:2:"pt";s:57:"Mostra uma lista de navegação com as categorias do Blog";s:2:"el";s:97:"Προβάλει την λίστα των κατηγοριών του ιστολογίου σας";s:2:"fr";s:49:"Permet d''afficher la liste de Catégories du Blog";s:2:"ru";s:57:"Выводит список категорий блога";s:2:"id";s:35:"Menampilkan daftar kategori tulisan";s:2:"fa";s:55:"نمایش لیستی از مجموعه های بلاگ";}', 'Stephen Cozart', 'http://github.com/clip/', '1.0.0', 1, 8, 1411571391),
 (9, 'latest_posts', 'a:8:{s:2:"en";s:12:"Latest posts";s:2:"br";s:24:"Artigos recentes do Blog";s:2:"fa";s:26:"آخرین ارسال ها";s:2:"pt";s:24:"Artigos recentes do Blog";s:2:"el";s:62:"Τελευταίες αναρτήσεις ιστολογίου";s:2:"fr";s:17:"Derniers articles";s:2:"ru";s:31:"Последние записи";s:2:"id";s:12:"Post Terbaru";}', 'a:8:{s:2:"en";s:39:"Display latest blog posts with a widget";s:2:"br";s:81:"Mostra uma lista de navegação para abrir os últimos artigos publicados no Blog";s:2:"fa";s:65:"نمایش آخرین پست های وبلاگ در یک ویجت";s:2:"pt";s:81:"Mostra uma lista de navegação para abrir os últimos artigos publicados no Blog";s:2:"el";s:103:"Προβάλει τις πιο πρόσφατες αναρτήσεις στο ιστολόγιό σας";s:2:"fr";s:68:"Permet d''afficher la liste des derniers posts du blog dans un Widget";s:2:"ru";s:100:"Выводит список последних записей блога внутри виджета";s:2:"id";s:51:"Menampilkan posting blog terbaru menggunakan widget";}', 'Erik Berman', 'http://www.nukleo.fr', '1.0.0', 1, 9, 1411571391),
-(10, 'link_footer', 's:11:"Link Footer";', 's:36:"Display link_footer that is awesome.";', 'Rizaq Pratama', 'http://riznap.com/', '1.0', 1, 10, 1411948645);
+(17, 'video', 'a:2:{s:2:"en";s:5:"Video";s:2:"id";s:5:"Video";}', 'a:2:{s:2:"en";s:12:"video widget";s:2:"id";s:12:"widget video";}', 'Rizaq', 'http://philsturgeon.co.uk/', '1.0.0', 1, 17, 1413102401),
+(11, 'berita_utama', 'a:2:{s:2:"en";s:13:"Headline News";s:2:"id";s:12:"Berita Utama";}', 'a:2:{s:2:"en";s:20:"headline news widget";s:2:"id";s:19:"widget berita utama";}', 'Rizaq', 'http://philsturgeon.co.uk/', '1.0.0', 1, 11, 1413033810),
+(12, 'berita_wabah', 'a:2:{s:2:"en";s:13:"Pandemic News";s:2:"id";s:21:"Berita Wabah Penyakit";}', 'a:2:{s:2:"en";s:20:"pandemic news widget";s:2:"id";s:28:"widget berita wabah penyakit";}', 'Rizaq', 'http://philsturgeon.co.uk/', '1.0.0', 1, 12, 1413033810),
+(13, 'cerita_daerah', 'a:2:{s:2:"en";s:18:"Story from country";s:2:"id";s:18:"Cerita dari daerah";}', 'a:2:{s:2:"en";s:20:"country story widget";s:2:"id";s:20:"widget cerita daerah";}', 'Rizaq', 'http://philsturgeon.co.uk/', '1.0.0', 1, 13, 1413033810),
+(14, 'kilas_berita', 'a:2:{s:2:"en";s:10:"News Flash";s:2:"id";s:12:"Kilas Berita";}', 'a:2:{s:2:"en";s:17:"news flash widget";s:2:"id";s:19:"widget kilas berita";}', 'Rizaq', 'http://philsturgeon.co.uk/', '1.0.0', 1, 14, 1413033810),
+(15, 'event_bulan_ini', 'a:2:{s:2:"en";s:13:"Monthly Event";s:2:"id";s:15:"Event Bulan Ini";}', 'a:2:{s:2:"en";s:17:"pppl event widget";s:2:"id";s:17:"widget event pppl";}', 'Rizaq', 'http://philsturgeon.co.uk/', '1.0.0', 1, 15, 1413029508),
+(16, 'kegiatan_pppl', 'a:2:{s:2:"en";s:11:"PPPL Agenda";s:2:"id";s:13:"Kegiatan PPPL";}', 'a:2:{s:2:"en";s:18:"pppl agenda widget";s:2:"id";s:20:"widget kegiatan pppl";}', 'Rizaq', 'http://philsturgeon.co.uk/', '1.0.0', 1, 16, 1413029508);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `default_widget_areas`
+-- Table structure for table `default_widget_areas`
 --
 
 CREATE TABLE IF NOT EXISTS `default_widget_areas` (
@@ -1094,19 +1233,26 @@ CREATE TABLE IF NOT EXISTS `default_widget_areas` (
   `slug` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   `title` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=9 ;
 
 --
--- Dumping data untuk tabel `default_widget_areas`
+-- Dumping data for table `default_widget_areas`
 --
 
 INSERT INTO `default_widget_areas` (`id`, `slug`, `title`) VALUES
-(1, 'sidebar', 'Sidebar');
+(1, 'sidebar', 'Sidebar'),
+(2, 'headline_news', 'Headline News'),
+(3, 'kegiatan_pppl', 'Kegiatan PPPL'),
+(4, 'side_story', 'Side Story'),
+(5, 'pandemic_news', 'Pandemic News'),
+(6, 'news_flash', 'Kilas Berita'),
+(7, 'monthly_event', 'Event Bulan Ini'),
+(8, 'video', 'Video');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `default_widget_instances`
+-- Table structure for table `default_widget_instances`
 --
 
 CREATE TABLE IF NOT EXISTS `default_widget_instances` (
@@ -1119,14 +1265,20 @@ CREATE TABLE IF NOT EXISTS `default_widget_instances` (
   `created_on` int(11) NOT NULL DEFAULT '0',
   `updated_on` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=11 ;
 
 --
--- Dumping data untuk tabel `default_widget_instances`
+-- Dumping data for table `default_widget_instances`
 --
 
 INSERT INTO `default_widget_instances` (`id`, `title`, `widget_id`, `widget_area_id`, `options`, `order`, `created_on`, `updated_on`) VALUES
-(1, 'Links', 10, 1, 'a:0:{}', 1, 1411948668, 0);
+(2, 'Kegiatan PPPL', 16, 3, 'a:0:{}', 1, 1413029768, 0),
+(3, 'Headline News', 11, 2, 'a:0:{}', 1, 1413029786, 0),
+(4, 'Berita Wabah Penyakit', 12, 5, 'a:0:{}', 1, 1413029808, 1413032189),
+(5, 'Berita dari Daerah', 13, 4, 'a:0:{}', 1, 1413029846, 0),
+(7, 'Kilas Berita', 14, 6, 'a:0:{}', 1, 1413029865, 0),
+(9, 'Event Bulan Ini', 15, 7, 'a:0:{}', 1, 1413029904, 0),
+(10, 'Video', 17, 8, 'a:0:{}', 1, 1413102439, 0);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
