@@ -1,18 +1,18 @@
 <div class="content">
 
 <h2>{{ template:title }}</h2>
-
+<em>Kegiatan kegiatan Dirjen PP & PL</em>
 {{ if beritas_count > 0 }}
 <div id="berita">
     
-    {{ pagination:links }}
+    {{ beritas.entries.pagination }}
     <ul class="list-unstyled">
     {{beritas.entries}}
     <li> 
         <h5>{{nama}}</h5>
         <em>Lokasi : {{lokasi}}</em>
         <p>
-            {{deskripsi}}
+           <a href={{url:site uri="event/view"}}/{{slug}}>View Detail</a>
 
         </p>
 

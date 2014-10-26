@@ -12,7 +12,7 @@
                     </div>
                     <div class="row">
                         <div class="col-lg-7">
-                            {{helper:character_limiter string=berita limit=240}}
+                            {{helper:character_limiter string=preview limit=240}}
                         </div>
                         <div class="col-lg-5">
 

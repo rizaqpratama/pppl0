@@ -75,14 +75,13 @@ class Widget_Kilas_berita extends Widgets
 		 $params = array(
             'stream' => 'beritas',
             'namespace' => 'berita',
-            'paginate' => 'yes',
-            'pag_segment' => 4
-        );
+            'limit' => 5
+         );
 
        	$berita = $this->streams->entries->get_entries($params);
 
        	$options['berita']=$berita;
-       	$options['count'] =count($berita);      
+       	$options['count'] =count($berita['entries']);      
 
 		return $options;
 	}

@@ -75,7 +75,7 @@ class Widget_Event_bulan_ini extends Widgets
 		 $params = array(
             'stream' => 'events',
             'namespace' => 'event',
-            
+            'limit'=>5
         );
 
        	$event = $this->streams->entries->get_entries($params);

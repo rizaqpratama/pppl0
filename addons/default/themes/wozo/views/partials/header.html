@@ -189,6 +189,13 @@
             color: #c1e2b3;
             text-decoration: none;
         }
+        
+        .dropdown-submenu{position:relative;}
+.dropdown-submenu>.dropdown-menu{top:0;left:100%;margin-top:-6px;margin-left:-1px;-webkit-border-radius:0 6px 6px 6px;-moz-border-radius:0 6px 6px 6px;border-radius:0 6px 6px 6px;}
+.dropdown-submenu:hover>.dropdown-menu{display:block;}
+.dropdown-submenu>a:after{display:block;content:" ";float:right;width:0;height:0;border-color:transparent;border-style:solid;border-width:5px 0 5px 5px;border-left-color:#cccccc;margin-top:5px;margin-right:-10px;}
+.dropdown-submenu:hover>a:after{border-left-color:#ffffff;}
+.dropdown-submenu.pull-left{float:none;}.dropdown-submenu.pull-left>.dropdown-menu{left:-100%;margin-left:10px;-webkit-border-radius:6px 0 6px 6px;-moz-border-radius:6px 0 6px 6px;border-radius:6px 0 6px 6px;}
 
     </style>
 
@@ -224,14 +231,7 @@
 
     </div>
     <div class="col-lg-2" class="socMedLinks">
-        <ul class="list-inline">
-            <li><a href="#">{{theme:image file="Facebook-icon.png"}}</a></li>
-            <li><a href="#">{{theme:image file="GooglePlus-icon.png"}}</a></li>
-            <li><a href="#">{{theme:image file="Twitter-icon.png"}}</a></li>
-            <li><a href="#">{{theme:image file="Youtube-icon.png"}}</a></li>
-
-        </ul>
-
+        {{ widgets:area slug="social_link" }}
     </div>
 </div>
 
@@ -245,39 +245,30 @@
 
                 <ul class="nav navbar-nav">
                     {{navigation:links group="header"}}
-
-                    <li {{if children}} class="dropdown" {{endif}}>
-                        <a href="{{url}}" {{if children}} class="dropdown-toggle" data-toggle="dropdown"{{endif}}>{{title}}
-                        {{if children}}<span class="caret"></span> {{endif}}
+                    
+                    <li {{if children_level_1}} class="dropdown" {{endif}}>
+                        <a href="{{url}}" {{if children_level_1}} class="dropdown-toggle" data-toggle="dropdown"{{endif}}>{{title}} 
+                        {{if children_level_1}}<span class="caret"></span> {{endif}}
                         </a>
-                        {{if children}}
+                        {{if children_level_1}}
                         <ul class="dropdown-menu my-dropdown-menu" role="menu">
-                            {{children}}
-                            <li><a href="{{url}}">{{title}}</a></li>
-                            {{/children}}
+                            {{children_level_1}}
+                            
+                            <li  class="dropdown-submenu" ><a href="{{url}}">{{title}}</a>                              
+                                
+                                <ul class="dropdown-menu">
+                                    
+                                    {{children_level_2}}
+                                    <li><a href="{{url}}">{{title}}</a></li>
+                                    {{/children_level_2}}
+                                </ul>
+                                                            </li>
+                            {{/children_level_1}}
                         </ul>
                         {{endif}}
 
                     </li>
-                    <!-- <li>
-                        <a href="#">Topik Kesehatan</a>
-                    </li>
-                    <li>
-                        <a href="#">Data</a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tentang Ditjen PPPL <span
-                                class="caret"></span></a>
-                        <ul class="dropdown-menu my-dropdown-menu" role="menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">One more separated link</a></li>
-                        </ul>
-                    </li> -->
+                   
                     {{/navigation:links}}
                 </ul>
             </div>
@@ -285,5 +276,9 @@
         </div>
         <!-- /.container -->
     </nav>
+    
+    <div>
+    
+    </div>
 
 </div>

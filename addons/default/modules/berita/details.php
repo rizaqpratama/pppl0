@@ -96,6 +96,15 @@ class Module_Berita extends Module
                 'unique' => true
             
             ),
+            array(
+                'name'=>'Preview',
+                'slug'=>'preview',
+                'namespace'=>'berita',
+                 'type' => 'wysiwyg',
+                'assign'=>'beritas',
+                'required'=>'true'
+                
+            ),
             
             array(
                 'name' => 'Berita',

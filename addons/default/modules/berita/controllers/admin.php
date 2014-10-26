@@ -67,7 +67,7 @@ class Admin extends Admin_Controller
         // signals the function to use the template library to build the page
         // so we don't have to. If we had that set to false, the function
         // would return a string with just the form.
-        $this->streams->cp->entries_table('beritas', 'berita', 3, 'admin/berita/index', true, $extra);
+        $this->streams->cp->entries_table('beritas', 'berita', 10, 'admin/berita/index', true, $extra);
     }
 
     /**

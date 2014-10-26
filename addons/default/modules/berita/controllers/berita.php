@@ -17,7 +17,7 @@ class Berita extends Public_Controller
     }
 
 
-    public function view($kategori=""){
+    public function category($kategori=""){
         if($kategori==""){
         $params = array(
             'stream' => 'beritas',
@@ -51,40 +51,9 @@ class Berita extends Public_Controller
 
     }
 
-
-     /**
-     * List all FAQs
-     *
-     * We are using the Streams API to grab
-     * data from the faqs database. It handles
-     * pagination as well.
-     *
-     * @access	public
-     * @return	void
-     */
-    public function index($slug ="")
-    {
-
-        if($slug==""){
+    public function view($slug=""){
+        
         $params = array(
-            'stream' => 'beritas',
-            'namespace' => 'berita',
-            'paginate' => 'yes',
-            'pag_segment' => 4
-        );
-
-        $beritas = $this->streams->entries->get_entries($params);
-        $beritas_count = count($beritas)    ;
-
-        // Build the page
-        $this->template->title($this->module_details['name'])
-                ->set('beritas',$beritas)
-                ->set('beritas_count', $beritas_count)
-                ->build('index');
-
-        }else{
-
-            $params = array(
             'stream' => 'beritas',
             'namespace' => 'berita',
             'where' => "slug = '$slug'",
@@ -100,8 +69,46 @@ class Berita extends Public_Controller
                 ->set('beritas_count', $beritas_count)
                 ->build('berita');
 
+    }
 
-        }
+     /**
+     * List all FAQs
+     *
+     * We are using the Streams API to grab
+     * data from the faqs database. It handles
+     * pagination as well.
+     *
+     * @access	public
+     * @return	void
+     */
+    public function index($page =0)
+    {
+
+        
+        $params = array(
+            'stream' => 'beritas',
+            'namespace' => 'berita',
+            
+        );
+
+        $beritas = $this->streams->entries->get_entries($params);
+        $beritas_count = count($beritas['entries'])    ;
+        $pagination = create_pagination('berita/', $beritas_count , 5, 3);
+        $params = array(
+            'stream' => 'beritas',
+            'namespace' => 'berita',
+            'limit'=>5,
+            'offset'=>$page*5
+        );
+        $beritas = $this->streams->entries->get_entries($params);
+        // Build the page
+        $this->template->title($this->module_details['name'])
+                ->set('beritas',$beritas)
+                ->set('beritas_count', $beritas_count)
+                ->set('pagination',$pagination)
+                ->build('index');
+            
+        
     }
 
 }

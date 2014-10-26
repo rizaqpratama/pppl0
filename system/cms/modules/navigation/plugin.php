@@ -168,7 +168,8 @@ class Plugin_Navigation extends Plugin
 		);
 
 		$links = $this->pyrocache->model('navigation_m', 'get_link_tree', $params, config_item('navigation_cache'));
-
+        
+        
 		return $this->_build_links($links, $this->content());
 	}
 
@@ -182,8 +183,10 @@ class Plugin_Navigation extends Plugin
 	 */
 	private function _build_links($links = array(), $return_arr = true)
 	{
+        
+        
 		static $current_link = false;
-		static $level = 0;
+		static $level = 1;
 
 		$top            = $this->attribute('top', false);
 		$separator      = $this->attribute('separator', '');
@@ -199,6 +202,8 @@ class Plugin_Navigation extends Plugin
 		$max_depth      = $this->attribute('max_depth');
 		$i              = 1;
 		$total          = sizeof($links);
+        
+        
 
 		if ( ! $return_arr )
 		{
@@ -229,7 +234,7 @@ class Plugin_Navigation extends Plugin
 				$ident_c = $ident_b . $indent;
 			}
 		}
-
+        
 		foreach ($links as $link)
 		{
 			$item    = array();
@@ -275,6 +280,7 @@ class Plugin_Navigation extends Plugin
 			// has children ? build children
 			if ( $link['children'] )
 			{
+                $wrapper['has_child']=true;
 				++$level;
 
 				if ( ! $max_depth or $level < $max_depth )
@@ -284,7 +290,9 @@ class Plugin_Navigation extends Plugin
 				}
 
 				--$level;
-			}
+			}else{
+                $wrapper['has_child']=false;
+            }
 
 			// is this the link to the page that we're on?
 			if ( preg_match('@^' . current_url() . '/?$@', $link['url']) or ($link['link_type'] == 'page' and $link['is_home']) and site_url() == current_url() )
@@ -337,7 +345,8 @@ class Plugin_Navigation extends Plugin
 			{
 				$item['target']   =& $item['attributes']['target'];
 				$item['class']    =& $item['attributes']['class'];
-				$item['children'] = $wrapper['children'];
+				$item['children_level_'.$level] = $wrapper['children'];
+                $item['has_child'] =$wrapper['has_child'];
 
 				if ( $wrapper['class'] && $item['class'] )
 				{
@@ -355,6 +364,7 @@ class Plugin_Navigation extends Plugin
 
 				// assign attributes to level family
 				$output[] = $item;
+                
 			}
 			else
 			{
@@ -403,7 +413,7 @@ class Plugin_Navigation extends Plugin
 				}
 			}
 		}
-
+        
 		return $output;
 	}
 }
