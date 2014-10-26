@@ -197,6 +197,29 @@
 .dropdown-submenu:hover>a:after{border-left-color:#ffffff;}
 .dropdown-submenu.pull-left{float:none;}.dropdown-submenu.pull-left>.dropdown-menu{left:-100%;margin-left:10px;-webkit-border-radius:6px 0 6px 6px;-moz-border-radius:6px 0 6px 6px;border-radius:6px 0 6px 6px;}
 
+        
+    #floatting-banner{
+        width: 160px;
+        height: 650px;
+        background: red; 
+        z-index:-10000;
+        position:fixed;
+        margin-left: 0px;
+        margin-top:0px;
+        float:left;
+        
+    }
+        
+    #floatting-right-banner{
+        width: 160px;
+        height: 650px;
+        background: red; 
+        z-index:-10001;
+        position:fixed;
+        margin-right: 0px;
+        margin-top:0px;
+        right:0px;
+    }    
     </style>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -207,12 +230,26 @@
     <![endif]-->
 
 
-    
+{{asset:js file="jquery.mousewheel-3.0.6.pack.js"}}
+{{asset:css file="jquery.fancybox.css"}}
+{{asset:js file="jquery.fancybox.js"}}
+{{asset:render}}
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>    
 </head>
 
 <body>
-
-
+<div id="floatting-banner">
+    {{ widgets:area slug="floatting_left" }}
+    
+</div>
+<div id="floatting-right-banner">
+    {{ widgets:area slug="floatting_right" }}
+    
+</div>
 <!-- Page Content -->
 <div class="container" id="mainContainer">
 <div class="row" id="subMenuTop">

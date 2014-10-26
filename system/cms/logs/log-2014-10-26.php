@@ -456,3 +456,72 @@ ERROR - 2014-10-26 07:43:23 --> Page Missing: img/small.jpg
 ERROR - 2014-10-26 07:44:16 --> Page Missing: img/small.jpg
 ERROR - 2014-10-26 08:21:01 --> Page Missing: addons/default/themes/wozo/css/images/bx_loader.gif
 ERROR - 2014-10-26 08:21:02 --> Page Missing: addons/default/themes/wozo/css/images/controls.png
+ERROR - 2014-10-26 09:22:13 --> Page Missing: addons/default/themes/wozo/css/images/bx_loader.gif
+ERROR - 2014-10-26 09:22:14 --> Page Missing: addons/default/themes/wozo/css/images/controls.png
+ERROR - 2014-10-26 09:24:44 --> Page Missing: addons/default/themes/wozo/css/images/bx_loader.gif
+ERROR - 2014-10-26 09:24:46 --> Page Missing: addons/default/themes/wozo/css/images/controls.png
+ERROR - 2014-10-26 09:25:25 --> Page Missing: addons/default/themes/wozo/css/images/bx_loader.gif
+ERROR - 2014-10-26 09:25:26 --> Page Missing: addons/default/themes/wozo/css/images/controls.png
+ERROR - 2014-10-26 09:25:50 --> Page Missing: addons/default/themes/wozo/css/images/bx_loader.gif
+ERROR - 2014-10-26 09:25:51 --> Page Missing: addons/default/themes/wozo/css/images/controls.png
+ERROR - 2014-10-26 09:26:20 --> Page Missing: addons/default/themes/wozo/css/images/bx_loader.gif
+ERROR - 2014-10-26 09:26:20 --> Page Missing: addons/default/themes/wozo/css/images/controls.png
+ERROR - 2014-10-26 09:28:03 --> Page Missing: addons/default/themes/wozo/css/images/bx_loader.gif
+ERROR - 2014-10-26 09:28:03 --> Page Missing: addons/default/themes/wozo/css/images/controls.png
+ERROR - 2014-10-26 09:31:27 --> Page Missing: addons/default/themes/wozo/css/images/bx_loader.gif
+ERROR - 2014-10-26 09:31:28 --> Page Missing: addons/default/themes/wozo/css/images/controls.png
+ERROR - 2014-10-26 09:32:48 --> Unable to save the image. Please make sure the image and file directory are writable.
+ERROR - 2014-10-26 10:27:11 --> Page Missing: addons/default/themes/wozo/css/images/controls.png
+ERROR - 2014-10-26 10:27:12 --> Page Missing: addons/default/themes/wozo/css/images/bx_loader.gif
+ERROR - 2014-10-26 11:48:45 --> Page Missing: addons/default/themes/wozo/css/images/bx_loader.gif
+ERROR - 2014-10-26 11:48:46 --> Page Missing: addons/default/themes/wozo/css/images/controls.png
+ERROR - 2014-10-26 11:49:22 --> Page Missing: addons/default/themes/wozo/css/images/bx_loader.gif
+ERROR - 2014-10-26 11:49:23 --> Page Missing: addons/default/themes/wozo/css/images/controls.png
+ERROR - 2014-10-26 12:29:12 --> Page Missing: addons/default/themes/wozo/css/images/bx_loader.gif
+ERROR - 2014-10-26 12:29:13 --> Page Missing: addons/default/themes/wozo/css/images/controls.png
+ERROR - 2014-10-26 13:48:09 --> Severity: Notice  --> Undefined index: image_id C:\wamp\www\pppl\addons\default\widgets\banner\views\form.php 4
+ERROR - 2014-10-26 13:53:46 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\pppl\addons\default\widgets\banner\banner.php 83
+ERROR - 2014-10-26 13:53:46 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\pppl\addons\default\widgets\banner\banner.php 83
+ERROR - 2014-10-26 13:53:46 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\pppl\addons\default\widgets\banner\banner.php 83
+ERROR - 2014-10-26 13:53:46 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\pppl\addons\default\widgets\banner\banner.php 83
+ERROR - 2014-10-26 13:53:46 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\pppl\addons\default\widgets\banner\banner.php 83
+ERROR - 2014-10-26 13:53:46 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\pppl\addons\default\widgets\banner\banner.php 83
+ERROR - 2014-10-26 13:53:46 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\pppl\addons\default\widgets\banner\banner.php 83
+ERROR - 2014-10-26 13:53:46 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\pppl\addons\default\widgets\banner\banner.php 83
+ERROR - 2014-10-26 13:53:46 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\pppl\addons\default\widgets\banner\banner.php 83
+ERROR - 2014-10-26 13:53:46 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\pppl\addons\default\widgets\banner\banner.php 83
+ERROR - 2014-10-26 13:53:47 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\pppl\addons\default\widgets\banner\banner.php 83
+ERROR - 2014-10-26 13:53:47 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\pppl\addons\default\widgets\banner\banner.php 83
+ERROR - 2014-10-26 13:53:47 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\pppl\addons\default\widgets\banner\banner.php 83
+ERROR - 2014-10-26 13:53:47 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\pppl\addons\default\widgets\banner\banner.php 83
+ERROR - 2014-10-26 13:53:47 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\pppl\addons\default\widgets\banner\banner.php 83
+ERROR - 2014-10-26 13:53:47 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\pppl\addons\default\widgets\banner\banner.php 83
+ERROR - 2014-10-26 13:53:47 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\pppl\addons\default\widgets\banner\banner.php 83
+ERROR - 2014-10-26 13:53:47 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\pppl\addons\default\widgets\banner\banner.php 83
+ERROR - 2014-10-26 13:53:47 --> Severity: Notice  --> Undefined index: image_id C:\wamp\www\pppl\addons\default\widgets\banner\views\form.php 4
+ERROR - 2014-10-26 13:56:18 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\pppl\addons\default\widgets\banner\banner.php 84
+ERROR - 2014-10-26 13:56:18 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\pppl\addons\default\widgets\banner\banner.php 84
+ERROR - 2014-10-26 13:56:18 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\pppl\addons\default\widgets\banner\banner.php 84
+ERROR - 2014-10-26 13:56:18 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\pppl\addons\default\widgets\banner\banner.php 84
+ERROR - 2014-10-26 13:56:18 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\pppl\addons\default\widgets\banner\banner.php 84
+ERROR - 2014-10-26 13:56:18 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\pppl\addons\default\widgets\banner\banner.php 84
+ERROR - 2014-10-26 13:56:18 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\pppl\addons\default\widgets\banner\banner.php 84
+ERROR - 2014-10-26 13:56:18 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\pppl\addons\default\widgets\banner\banner.php 84
+ERROR - 2014-10-26 13:56:18 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\pppl\addons\default\widgets\banner\banner.php 84
+ERROR - 2014-10-26 13:56:18 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\pppl\addons\default\widgets\banner\banner.php 84
+ERROR - 2014-10-26 13:56:18 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\pppl\addons\default\widgets\banner\banner.php 84
+ERROR - 2014-10-26 13:56:18 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\pppl\addons\default\widgets\banner\banner.php 84
+ERROR - 2014-10-26 13:56:18 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\pppl\addons\default\widgets\banner\banner.php 84
+ERROR - 2014-10-26 13:56:18 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\pppl\addons\default\widgets\banner\banner.php 84
+ERROR - 2014-10-26 13:56:18 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\pppl\addons\default\widgets\banner\banner.php 84
+ERROR - 2014-10-26 13:56:18 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\pppl\addons\default\widgets\banner\banner.php 84
+ERROR - 2014-10-26 13:56:18 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\pppl\addons\default\widgets\banner\banner.php 84
+ERROR - 2014-10-26 13:56:18 --> Severity: Notice  --> Trying to get property of non-object C:\wamp\www\pppl\addons\default\widgets\banner\banner.php 84
+ERROR - 2014-10-26 13:56:18 --> Severity: Notice  --> Undefined index: image_id C:\wamp\www\pppl\addons\default\widgets\banner\views\form.php 4
+ERROR - 2014-10-26 13:57:25 --> Severity: Notice  --> Undefined index: image_id C:\wamp\www\pppl\addons\default\widgets\banner\views\form.php 4
+ERROR - 2014-10-26 14:10:50 --> Page Missing: addons/default/themes/wozo/css/images/bx_loader.gif
+ERROR - 2014-10-26 14:10:50 --> Page Missing: addons/default/themes/wozo/css/images/controls.png
+ERROR - 2014-10-26 14:33:14 --> Page Missing: addons/default/themes/wozo/css/images/bx_loader.gif
+ERROR - 2014-10-26 14:33:15 --> Page Missing: addons/default/themes/wozo/css/images/controls.png
+ERROR - 2014-10-26 14:38:25 --> Page Missing: addons/default/themes/wozo/css/images/bx_loader.gif
+ERROR - 2014-10-26 14:38:26 --> Page Missing: addons/default/themes/wozo/css/images/controls.png
